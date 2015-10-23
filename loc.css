@@ -1,0 +1,56 @@
+
+.container{
+    width:80%;
+    /*position:relative;*/
+    display: inline-block;
+    margin-left: 10%;
+    position: absolute;
+    /*margin: 0 auto;*/
+    /*height: 800px;*/
+}
+.dummy{
+    margin-top: 150%;  /*比例1.5:1*/
+}
+.content{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+}
+/*.container {*/
+    /*width: 80%;*/
+    /*margin-left: 10%;*/
+    /*position: relative;*/
+    /*display: inline-block;*/
+    /*border: solid 1px red;*/
+    /*position: absolute;*/
+    /*width: 80%;*/
+    /*margin-left: 10%;*/
+/*}*/
+/*.dummy{*/
+    /*margin-top: 240%;*/
+/*}*/
+.one {
+    border: solid 1px red;
+    height: 15%;
+    width: 100%;
+}
+
+.two {
+    border: solid 1px red;
+    height: 30%;
+    width: 100%;
+}
+
+.three {
+    border: solid 1px red;
+    height: 45%;
+    width: 100%;
+}
+
+.four {
+    border: solid 1px red;
+    height: 10%;
+    width: 100%;
+}
