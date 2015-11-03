@@ -58,8 +58,7 @@
     background: green;
 }
 #middle_2 {
-    width:
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
 }
 .content_block_1 {
     display: inline-block;
@@ -82,4 +81,22 @@
     line-height: 30px;
     margin-right: 10px;
 }
-#footer
+#middle_left {
+    display: inline-block;
+    width: 790px;
+    height: 400px;
+    margin-right: 6px;
+    background: green;
+}
+#middle_right {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    background: green;
+}
+#footer {
+    width: 1200px;
+    height: 120px;
+    background: green;
+    margin-top: 8px;
+}
