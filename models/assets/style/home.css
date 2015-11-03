@@ -40,12 +40,16 @@
 }
 #image_roll {
     display: inline-block;
+    *display: inline;
+    zoom: 1;
     width: 500px;
     height: 300px;
     background: yellow;
 }
 #news_list {
     display: inline-block;
+    *display: inline;
+    zoom: 1;
     margin-left: 6px;
     width: 690px;
     height: 300px;
@@ -62,6 +66,8 @@
 }
 .content_block_1 {
     display: inline-block;
+    *display: inline;
+    zoom: 1;
     width: 390px;
     height: 200px;
     margin: 8px 3px 0 4px;
@@ -71,11 +77,13 @@
     width: 390px;
     height: 30px;
     background: red;
+    text-align: left;
 }
 .Title_text {
     line-height: 30px;
+    float: left;
 }
-.block_1_header .more {
+.more {
     float: right;
     height: 30px;
     line-height: 30px;
@@ -83,16 +91,66 @@
 }
 #middle_left {
     display: inline-block;
+    *display: inline;
+    zoom: 1;
     width: 790px;
     height: 400px;
     margin-right: 6px;
     background: green;
 }
+#middle_left #left_part, #middle_left #right_part {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    width: 390px;
+    height: 390px;
+    background:yellow;
+    margin: 1px;
+}
+#middle_left .big_content {
+    width: 390px;
+    height: 190px;
+    background: blue;
+    margin: 2px 0;
+}
+#middle_left .small_content {
+    width: 390px;
+    height: 125px;
+    background: blue;
+    margin: 3px 0;
+}
+.content_header {
+    width: 390px;
+    height: 30px;
+    background: red;
+}
 #middle_right {
     display: inline-block;
+    *display: inline;
+    zoom: 1;
     width: 400px;
     height: 400px;
     background: green;
+}
+#spec_info, #leader_mail, #branch_links {
+    background: yellow;
+    width: 400px;
+    margin: 5px 0;
+}
+.right_header {
+    width: 400px;
+    height: 30px;
+    background: red;
+}
+#spec_info {
+    height: 150px;
+}
+#leader_mail {
+    height: 80px;
+    background: gray;
+}
+#branch_links {
+    height: 150px;
 }
 #footer {
     width: 1200px;
