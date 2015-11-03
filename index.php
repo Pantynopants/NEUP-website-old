@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- html document -->
-    <!--<meta name="viewport"-->
-    <!--content="-->
-    <!--height = [pixel_value | device-height] ,-->
-    <!--width = [pixel_value | device-width ] ,-->
-    <!--initial-scale = float_value ,-->
-    <!--minimum-scale = float_value ,-->
-    <!--maximum-scale = float_value ,-->
-    <!--user-scalable = [yes | no] ,-->
-    <!--target-densitydpi = [dpi_value | device-dpi | high-dpi | medium-dpi | low-dpi]-->
-    <!--"-->
-    <!--/>-->
-    <title>无标题文档</title>
-
-    <link rel="stylesheet" href="style.css" type="text/css">
-
-</head>
+﻿<?php 
+    get_header();
+?>
 
 <body>
 <div class="container">
@@ -92,10 +73,44 @@
                 <div class="right">
                     <div style="height: 35%;width: 98%;border: solid 1px black;margin: 1%;">
                         <span>头条新闻</span>
+                        <?php
+                            if(have_posts())
+                            {
+                                while(have_posts())
+                                {
+                                    the_post();
+                                    $category = get_the_category();
+                                    if($category[0]->cat_name=="头条新闻")
+                                    {
+                        ?>
+                        <div><a href="<?php the_permalink(); ?>"><?php the_title()?></a></div>
+                        <?php
+                                    }
+                                }
+
+                            }
+                        ?>
                     </div>
                     <div style="height: 55%;width: 98%;border: solid 1px black;margin: 1%;">
                         <ul style="list-style: none">
                             <li><span>新闻</span></li>
+                            <?php
+                            if(have_posts())
+                            {
+                                while(have_posts())
+                                {
+                                    the_post();
+                                    $category = get_the_category();
+                                    if($category[0]->cat_name=="新闻")
+                                    {
+                            ?>
+                            <li><a href="<?php the_permalink(); ?>"><?php the_title()?></a></li>
+                        <?php
+                                    }
+                                }
+
+                            }
+                        ?>
                         </ul>
                     </div>
                 </div>
@@ -106,12 +121,81 @@
         </div>
         <div class="three">
             <!--这里面内容较多，不一一列举div，自行设计-->
-            <div id="notice1"><span>最新公告</span></div>
+            <div id="notice1"><span>最新公告</span>
+            <?php
+                if(have_posts())
+                    {
+                        while(have_posts())
+                        {
+                            the_post();
+                            $category = get_the_category();
+                            if($category[0]->cat_name=="公告")
+                            {
+                        ?>
+                        <div><a href="<?php the_permalink(); ?>"><?php the_title()?></a></div>
+                        <?php
+                            }
+                            }
+
+                    }
+            ?>
+
+            </div>
             <div id="notice2"><span>最新公告</span></div>
+            <?php
+                if(have_posts())
+                    {
+                        while(have_posts())
+                        {
+                            the_post();
+                            $category = get_the_category();
+                            if($category[0]->cat_name=="公告")
+                            {
+                        ?>
+                        <div><a href="<?php the_permalink(); ?>"><?php the_title()?></a></div>
+                        <?php
+                            }
+                            }
+
+                    }
+            ?>
             <div id="calendar"><span>先锋校历</span></div>
+            <?php
+                if(have_posts())
+                    {
+                        while(have_posts())
+                        {
+                            the_post();
+                            $category = get_the_category();
+                            if($category[0]->cat_name=="校历")
+                            {
+                        ?>
+                        <div><a href="<?php the_permalink(); ?>"><?php the_title()?></a></div>
+                        <?php
+                            }
+                            }
+
+                    }
+            ?>
             <div id="paihang">
                 <span>排行榜</span>
+                <?php
+                if(have_posts())
+                {
+                    while(have_posts())
+                    {
+                        the_post();
+                        $category = get_the_category();
+                            if($category[0]->cat_name=="排行榜")
+                            {
+                        ?>
+                        <div><a href="<?php the_permalink(); ?>"><?php the_title()?></div>
+                        <?php
+                    }
+                    }
 
+                }
+            ?>
                 <div id="spe1"></div>
                 <div id="spe2"></div>
                 <div id="spe3"></div>
@@ -122,34 +206,5 @@
             <div id="mail"><span>书记信箱</span></div>
             <div id="depart"><span>部门在线</span></div>
         </div>
-        <div class="four">
-            <!--这里是最简单的部分，自行设计-->
-            <div class="left">
-                <span>辽ICP备05001332号</span>
-            </div>
-
-            <div class="right">
-                <span><a rel="nofollow" href="http://bbs.neupioneer.com/forumdisplay.php?fid=173">建议意见</a></span> |
-                <span><a href="./neup" target="_blank">管理入口</a></span> |
-                <span><a href="/html/copyright.html">版权声明</a></span>
-                <span class="friendLinks"><a rel="nofollow" href="http://www.ahandbagsshop.com/best_deal.html"
-                                             class="friendLinks">handbags shop online</a>
-                </span><br>
-                <span class="copyright">
-                    Copyright1 &copy; 2002-2015 neupioneer.com 版权所有 All Rights Reserved. <br/>
-                </span>
-
-                <div class="link">
-                    <span>
-                    <strong>主办单位</strong>：<strong>共青团东北大学委员会</strong> &#160;<strong>技术支持</strong>：<a rel="nofollow"
-                                                                                                     href="http://tech.neupioneer.com/"><strong>先锋网技术部</strong></a>
-                    <a href="http://www.neupioneer.com/neup" target="_blank">管理入口</a> <br/>
-                    联系方式：Tel: 024-836(88321) Fax: 024-83687349 Email: <a
-                            href="mailto:neupioneer@126.com">neupioneer@126.com</a>
-                        </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+        
+<?php get_footer(); ?>
