@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=<? echo get_bloginfo('charset'); ?>" />
+    <meta name="description" content="<? bloginfo('description'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- html document -->
     <!--<meta name="viewport"-->

@@ -7,9 +7,10 @@
     <div class='dummy'></div>
     <div class="content">
         <div class="one">
-            <div class="log">
+            <!--<div class="log">
                 <span>用户名：123456789 密码：123123 验证码：123 登录</span>
             </div>
+             -->
             <div class="banner">
                 <span>先锋网</span>
             </div>
@@ -139,9 +140,8 @@
 
                     }
             ?>
-
             </div>
-            <div id="notice2"><span>最新公告</span></div>
+            <div id="notice2"><span>最新公告</span>
             <?php
                 if(have_posts())
                     {
@@ -159,7 +159,8 @@
 
                     }
             ?>
-            <div id="calendar"><span>先锋校历</span></div>
+            </div>
+            <div id="calendar"><span>先锋校历</span>
             <?php
                 if(have_posts())
                     {
@@ -177,6 +178,7 @@
 
                     }
             ?>
+            </div>
             <div id="paihang">
                 <span>排行榜</span>
                 <?php
