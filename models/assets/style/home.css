@@ -1,0 +1,85 @@
+#container {
+    width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    width: 1200px;
+}
+#header_pic {
+    width: 1200px;
+    height: 200px;
+    background: red;
+
+}
+#navigator {
+    width: 1200px;
+    height: 40px;
+    background: blue;
+}
+#welcome {
+    width: 1200px;
+    height: 30px;
+    background: white;
+}
+#welcome span {
+    font-size: 18px;
+    margin-left: 20px;
+    line-height: 30px;
+    background: green;
+}
+#search {
+    float: right;
+    width: 150px;
+    height: 30px;
+    margin-right: 20px;
+    background: green;
+}
+#content {
+    width: 1200px;
+    background: blue;
+}
+#image_roll {
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    background: yellow;
+}
+#news_list {
+    display: inline-block;
+    margin-left: 6px;
+    width: 690px;
+    height: 300px;
+    background: yellow;
+}
+#middle_links {
+    margin-top: 10px;
+    width: 1200px;
+    height: 250px;
+    background: green;
+}
+#middle_2 {
+    width:
+    margin: 0 auto;
+}
+.content_block_1 {
+    display: inline-block;
+    width: 390px;
+    height: 200px;
+    margin: 8px 3px 0 4px;
+    background: yellow;
+}
+.block_1_header {
+    width: 390px;
+    height: 30px;
+    background: red;
+}
+.Title_text {
+    line-height: 30px;
+}
+.block_1_header .more {
+    float: right;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+}
+#footer
