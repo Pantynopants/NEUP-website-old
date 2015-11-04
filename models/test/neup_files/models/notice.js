@@ -1,3 +1,8 @@
+
+var scroll2 = new ScrollText("breakNewsList", "pre2", "next2", true, 40, true);
+scroll2.LineHeight = 200;
+
+
 function ScrollText(content, btnPrevious, btnNext, autoStart, timeout, isSmoothScroll) {
     this.Speed = 10;
     this.Timeout = timeout;
@@ -113,3 +118,4 @@ function ignoreError() {
     return true;
 }
 window.onerror = ignoreError;
+

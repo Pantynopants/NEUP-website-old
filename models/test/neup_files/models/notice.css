@@ -1,0 +1,12 @@
+
+#breakNews #breakNewsList {
+    height: 100px;
+    overflow: hidden;
+}
+
+#breakNewsList {
+    font-size: 12px;
+    height: 200px;
+    overflow: hidden;
+    line-height: 20px;
+}
