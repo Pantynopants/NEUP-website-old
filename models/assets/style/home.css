@@ -13,8 +13,9 @@
 }
 #navigator {
     width: 1200px;
-    height: 40px;
-    background: blue;
+    /*height: 40px;*/
+    height: 65px;
+    background: white;
 }
 #welcome {
     width: 1200px;
@@ -29,7 +30,7 @@
 }
 #search {
     float: right;
-    width: 150px;
+    width: 250px;
     height: 30px;
     margin-right: 20px;
     background: green;

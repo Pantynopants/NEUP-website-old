@@ -3,78 +3,165 @@
 <html>
 <head>
     <title>NEU Pioneer</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="./assets/style/base.css" type="text/css" media="screen" charset="utf-8">
     <link rel="stylesheet" href="./assets/style/home.css" type="text/css" media="screen" charset="utf-8">
+
+    <link href="./assets/style/dropdown.css" rel="stylesheet" media="screen" type="text/css"/>
 </head>
+
 <body>
 <div id="container">
     <div id="header">
         <div id="header_pic">This is a picture</div>
-        <div id="navigator">This is a Navigator</div>
-        <div id="welcome"><span>欢迎访问东北大学团委先锋网</span><div id="search"></div></div>
-    </div>
-    <div id="content">
-        <div id="top_news">
-            <div id="image_roll">
-                This is an image-rolling component.
-            </div>
-            <div id="news_list">
-                This is a list of top news.
-            </div>
-        </div>
-        <div id="middle_links">
-            These are some links.
-        </div>
-        <div id="middle_2">
-            <div class="content_block_1">
-                <div class="block_1_header"><span class="Title_text">Content Block 1</span><div class="more"><a href="#">更多</a></div></div>
-            </div>
-            <div class="content_block_1">
-                <div class="block_1_header"><span class="Title_text">Content Block 1</span><div class="more"><a href="#">更多</a></div></div>
-            </div>
-            <div class="content_block_1">
-                <div class="block_1_header"><span class="Title_text">Content Block 1</span><div class="more"><a href="#">更多</a></div></div>
-            </div>
-        </div>
-        <div id="middle_left">
-            <div id="left_part">
-                <div class="big_content">
-                    <div class="content_header"><span class="Title_text">Inbox Content</span><div class="more"><a href="#">更多</a></div></div>
-                </div>
-                <div class="big_content">
-                    <div class="content_header"><span class="Title_text">Inbox Content</span><div class="more"><a href="#">更多</a></div></div>
-                </div>
-            </div>
-            <div id="right_part">
-                <div class="small_content">
-                    <div class="content_header"><span class="Title_text">Inbox Content</span><div class="more"><a href="#">更多</a></div></div>
-                </div>
-                <div class="small_content">
-                    <div class="content_header"><span class="Title_text">Inbox Content</span><div class="more"><a href="#">更多</a></div></div>
-                </div>
-                <div class="small_content">
-                    <div class="content_header"><span class="Title_text">Inbox Content</span><div class="more"><a href="#">更多</a></div></div>
-                </div>
-            </div>
-        </div>
-        <div id="middle_right">
-            <div id="spec_info">
-                <div class="right_header"><span class="Title_text">Inbox Content</span><div class="more"><a href="#">更多</a></div></div>
+        <div id="navigator">
+            <div id="welcome"><span>欢迎访问东北大学团委先锋网</span>
 
+                <div id="search"><input type="text" style="width: 200px;" placeholder="请输入要查找的内容"><input type="button"
+                                                                                                         value="提交">
+                </div>
             </div>
-            <div id="leader_mail">
+            <nav>
+                <ul>
+                    <li><a href="#">先锋网首页</a></li>
+                    <li><a href="#">东大共青团</a>
+                        <ul>
+                            <li><a href="#">团委简介</a></li>
+                            <li><a href="#">机构设置</a></li>
+                            <li><a href="#">工作职责</a></li>
+                            <li><a href="#">光辉历程</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">素质拓展</a>
+                        <ul>
+                            <li><a href="http://www2.neupioneer.com/enac/">思想教育中心</a></li>
+                            <li><a href="http://suz.neupioneer.com/">素质拓展中心</a></li>
+                            <li><a href="http://219.216.96.15/spc/">社会实践中心</a></li>
+                            <li><a href="http://www2.neupioneer.com/kechuang/">科技创新中心</a></li>
+                            <li><a href="http://www2.neupioneer.com/enac/">文化素质中心</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">网上团支部</a>
+                        <ul>
+                            <li><a href="http://tzb.neupioneer.com/">网上团支部</a></li>
+                            <li><a href="http://tzb.neupioneer.com/home.php">支部博客联盟</a></li>
+                            <li><a href="http://tzb.neu-pioneer.cn/tzb/static/video/play.html">团日视频展播</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">青年组织</a>
+                        <ul>
+                            <li><a href="http://suneu.neupioneer.com/">学生会</a></li>
+                            <li><a href="http://neugu.neu.edu.cn/">研究生会</a></li>
+                            <li><a href="http://sl.neupioneer.com">社团联合会</a></li>
+                            <li><a href="http://zyz.neupioneer.com/">志愿者协会</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">先锋网络</a>
+                        <ul>
+                            <li><a href="http://tech.neupioneer.com/">先锋技术部</a></li>
+                            <li><a href="http://tree.neup.me/">先锋树</a></li>
+                            <li><a href="http://planet.neup.me/">先锋星球</a></li>
+                            <li><a href="http://blog.neupioneer.com/summary.php">先锋博客</a></li>
+                            <li><a href="http://www2.neupioneer.com/audio">先锋广播</a></li>
+                            <li><a href="http://www2.neupioneer.com/tv">先锋电视</a></li>
+                            <li><a href="http://bbs.neupioneer.com/">先锋论坛</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">文件下载</a></li>
+                </ul>
+            </nav>
 
+        </div>
+
+
+        <div id="content">
+            <div id="top_news">
+                <div id="image_roll">
+                    This is an image-rolling component.
+                </div>
+                <div id="news_list">
+                    This is a list of top news.
+                </div>
             </div>
-            <div id="branch_links">
-                <div class="right_header"><span class="Title_text">Inbox Content</span></div>
+            <div id="middle_links">
+                These are some links.
+            </div>
+            <div id="middle_2">
+                <div class="content_block_1">
+                    <div class="block_1_header"><span class="Title_text">站内公告</span>
 
+                        <div class="more"><a href="#">更多</a></div>
+                    </div>
+                </div>
+                <div class="content_block_1">
+                    <div class="block_1_header"><span class="Title_text">本月热点</span>
+
+                        <div class="more"><a href="#">更多</a></div>
+                    </div>
+                </div>
+                <div class="content_block_1">
+                    <div class="block_1_header"><span class="Title_text">先锋校历</span>
+
+                        <div class="more"><a href="#">更多</a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="middle_left">
+                <div id="left_part">
+                    <div class="big_content">
+                        <div class="content_header"><span class="Title_text">Inbox Content</span>
+
+                            <div class="more"><a href="#">更多</a></div>
+                        </div>
+                    </div>
+                    <div class="big_content">
+                        <div class="content_header"><span class="Title_text">Inbox Content</span>
+
+                            <div class="more"><a href="#">更多</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="right_part">
+                    <div class="small_content">
+                        <div class="content_header"><span class="Title_text">Inbox Content</span>
+
+                            <div class="more"><a href="#">更多</a></div>
+                        </div>
+                    </div>
+                    <div class="small_content">
+                        <div class="content_header"><span class="Title_text">Inbox Content</span>
+
+                            <div class="more"><a href="#">更多</a></div>
+                        </div>
+                    </div>
+                    <div class="small_content">
+                        <div class="content_header"><span class="Title_text">Inbox Content</span>
+
+                            <div class="more"><a href="#">更多</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="middle_right">
+                <div id="spec_info">
+                    <div class="right_header"><span class="Title_text">专题信息</span>
+
+                        <div class="more"><a href="#">更多</a></div>
+                    </div>
+
+                </div>
+                <div id="leader_mail">
+
+                </div>
+                <div id="branch_links">
+                    <div class="right_header"><span class="Title_text">部门在线</span></div>
+
+                </div>
             </div>
         </div>
-    </div>
-    <div id="footer">
-        This is footer
-    </div>
+        <div id="footer">
+            This is footer
+        </div>
     </div>
 </div>
 </body>
