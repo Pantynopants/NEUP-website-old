@@ -4,12 +4,12 @@
 }
 #header {
     width: 1200px;
+    background-color: red;
 }
 #header_pic {
     width: 1200px;
     height: 200px;
-    background: red;
-
+    background-color: red;
 }
 #navigator {
     width: 1200px;
