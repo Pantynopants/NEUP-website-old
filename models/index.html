@@ -11,8 +11,10 @@
     <link href="./assets/style/notice.css" rel="stylesheet" media="screen" type="text/css"/>
 
     <link href=".assets/style/dedecms.css" rel="stylesheet" media="screen" type="text/css">
+    <link href="assets/style/image_roll.css" rel="stylesheet" media="screen" type="text/css">
 
-    <script language="javascript"  type="text/javascript">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
         function ScrollText(content, btnPrevious, btnNext, autoStart, timeout, isSmoothScroll) {
             this.Speed = 10;
             this.Timeout = timeout;
@@ -41,7 +43,6 @@
                 this.Start();
             }
         }
-
         ScrollText.prototype = {
 
             $: function (element) {
@@ -123,14 +124,35 @@
                 }
             }
         }
-
         function ignoreError() {
             return true;
         }
         window.onerror = ignoreError;
-
     </script>
 
+    <script type="text/JavaScript">
+        var banArray = new Array(3);
+        var counter = 1;
+        if (document.images) {
+            for (i = 0; i < 3; i++) {
+                banArray[i] = new Image(468, 60);
+                banArray[i].src = "static/" + (i + 1) + ".jpg";
+            }
+        }
+        function changeBanner() {
+            if (counter > 2)
+                counter = 0;
+            document.banner.src = banArray[counter].src; //sets a new banner
+            counter++;
+        }
+        var timer = window.setInterval("changeBanner()", 4000);
+        function show(number) {
+            clearInterval(timer);
+            document.banner.src = "static/" + number + ".jpg";
+            counter = number;
+            timer = window.setInterval("changeBanner()", 4000);
+        }
+    </script>
 </head>
 
 <body>
@@ -141,8 +163,8 @@
         <div id="navigator">
             <div id="welcome"><span>欢迎访问东北大学团委先锋网</span>
 
-                <div id="search"><input type="text" style="width: 200px;" placeholder="请输入要查找的内容"><input type="button"
-                                                                                                         value="提交">
+                <div id="search">
+                    <input type="text" style="width: 200px;" placeholder="请输入要查找的内容"><input type="button" value="提交">
                 </div>
             </div>
             <nav>
@@ -200,7 +222,35 @@
         <div id="content">
             <div id="top_news">
                 <div id="image_roll">
-                    This is an image-rolling component.
+                    <div class="image">
+                        <div id="left_image">
+                            <a href="#"><img src="static/1.jpg" width=400px height=300px
+                                             border=0 name="banner"></a>
+
+                            <div id="description">
+                                <span>description...</span>
+                            </div>
+                        </div>
+                        <div id="right_image">
+                            <div class="small_image">
+                                <a onclick="show(1)">
+                                    <img src="static/1.jpg" width="88px" height="66px">
+                                </a>
+                            </div>
+                            <div class="small_image">
+                                <a onclick="show(2)">
+                                    <img src="static/2.jpg" width="88px" height="66px">
+                                </a>
+                            </div>
+
+                            <div class="small_image">
+                                <a onclick="show(3)">
+                                    <img src="static/3.jpg" width="88px" height="66px">
+                                </a>
+                            </div>
+                            <div class="more"><a href="" style="text-decoration: none;color: red"> 更多> </a></div>
+                        </div>
+                    </div>
                 </div>
                 <div id="news_list">
                     This is a list of top news.
@@ -216,107 +266,95 @@
                         <div class="more"><a href="http://www.neupioneer.com/plus/list.php?tid=6">更多</a></div>
                     </div>
                     <div class="block_1_content">
-                        <div class="w960 center clear mt1 zindexlow"
-                             style="border:solid 1px red;width: 390px;height: 170px;">
-                            <div class="pright">
-                                <div class="announce mt1">
-
-                                    <dl class="tbox">
-                                        <dd>
-                                            <ul class="c1 ico2" id="breakNewsList">
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14987.html"
-                                                       title="关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知">关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知</a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14988.html"
-                                                       title="关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知">关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知</a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14986.html"
-                                                       title="关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知">关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知</a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14985.html"
-                                                       title="关于组织开展2014-2015学年度团员民主评议工作的通知">关于组织开展2014-2015学年度团员民主评议工作的通知</a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14703.html"
-                                                       title="关于开展“示范团支部”创建和“十佳团支书”评选工作的通知">关于开展“示范团支部”创建和“十佳团支书”评选工作的通知</a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14702.html"
-                                                       title="关于开展十月份主题团日活动的通知">关于开展十月份主题团日活动的通知</a></li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0922/14668.html"
-                                                       title="东北大学第十八届研究生支教团拟录取名单公示">东北大学第十八届研究生支教团拟录取名单公示</a></li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0630/14598.html"
-                                                       title="&lt;strong&gt;东北大学2015年大学生暑期社会实践校级重点团队名单公示&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践校级重点团队名单公示</strong></a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0619/14521.html"
-                                                       title="&lt;strong&gt;2015年东北大学“理论之光”暑期社会实践校级重点团队名单&lt;/strong&gt;"><strong>2015年东北大学“理论之光”暑期社会实践校级重点团队名单</strong></a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0608/14449.html"
-                                                       title="&lt;strong&gt;东北大学2015年大学生暑期社会实践立项启动通知&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践立项启动通知</strong></a>
-                                                </li>
+                        <div class="announce mt1">
+                            <ul class="c1 ico2" id="breakNewsList">
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14987.html"
+                                       title="关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知">关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14988.html"
+                                       title="关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知">关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14986.html"
+                                       title="关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知">关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14985.html"
+                                       title="关于组织开展2014-2015学年度团员民主评议工作的通知">关于组织开展2014-2015学年度团员民主评议工作的通知</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14703.html"
+                                       title="关于开展“示范团支部”创建和“十佳团支书”评选工作的通知">关于开展“示范团支部”创建和“十佳团支书”评选工作的通知</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14702.html"
+                                       title="关于开展十月份主题团日活动的通知">关于开展十月份主题团日活动的通知</a></li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0922/14668.html"
+                                       title="东北大学第十八届研究生支教团拟录取名单公示">东北大学第十八届研究生支教团拟录取名单公示</a></li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0630/14598.html"
+                                       title="&lt;strong&gt;东北大学2015年大学生暑期社会实践校级重点团队名单公示&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践校级重点团队名单公示</strong></a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0619/14521.html"
+                                       title="&lt;strong&gt;2015年东北大学“理论之光”暑期社会实践校级重点团队名单&lt;/strong&gt;"><strong>2015年东北大学“理论之光”暑期社会实践校级重点团队名单</strong></a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0608/14449.html"
+                                       title="&lt;strong&gt;东北大学2015年大学生暑期社会实践立项启动通知&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践立项启动通知</strong></a>
+                                </li>
 
 
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14987.html"
-                                                       title="关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知">关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知</a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14988.html"
-                                                       title="关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知">关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知</a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14986.html"
-                                                       title="关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知">关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知</a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14985.html"
-                                                       title="关于组织开展2014-2015学年度团员民主评议工作的通知">关于组织开展2014-2015学年度团员民主评议工作的通知</a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14703.html"
-                                                       title="关于开展“示范团支部”创建和“十佳团支书”评选工作的通知">关于开展“示范团支部”创建和“十佳团支书”评选工作的通知</a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14702.html"
-                                                       title="关于开展十月份主题团日活动的通知">关于开展十月份主题团日活动的通知</a></li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0922/14668.html"
-                                                       title="东北大学第十八届研究生支教团拟录取名单公示">东北大学第十八届研究生支教团拟录取名单公示</a></li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0630/14598.html"
-                                                       title="&lt;strong&gt;东北大学2015年大学生暑期社会实践校级重点团队名单公示&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践校级重点团队名单公示</strong></a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0619/14521.html"
-                                                       title="&lt;strong&gt;2015年东北大学“理论之光”暑期社会实践校级重点团队名单&lt;/strong&gt;"><strong>2015年东北大学“理论之光”暑期社会实践校级重点团队名单</strong></a>
-                                                </li>
-                                                <li>
-                                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0608/14449.html"
-                                                       title="&lt;strong&gt;东北大学2015年大学生暑期社会实践立项启动通知&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践立项启动通知</strong></a>
-                                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14987.html"
+                                       title="关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知">关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14988.html"
+                                       title="关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知">关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14986.html"
+                                       title="关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知">关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14985.html"
+                                       title="关于组织开展2014-2015学年度团员民主评议工作的通知">关于组织开展2014-2015学年度团员民主评议工作的通知</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14703.html"
+                                       title="关于开展“示范团支部”创建和“十佳团支书”评选工作的通知">关于开展“示范团支部”创建和“十佳团支书”评选工作的通知</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14702.html"
+                                       title="关于开展十月份主题团日活动的通知">关于开展十月份主题团日活动的通知</a></li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0922/14668.html"
+                                       title="东北大学第十八届研究生支教团拟录取名单公示">东北大学第十八届研究生支教团拟录取名单公示</a></li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0630/14598.html"
+                                       title="&lt;strong&gt;东北大学2015年大学生暑期社会实践校级重点团队名单公示&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践校级重点团队名单公示</strong></a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0619/14521.html"
+                                       title="&lt;strong&gt;2015年东北大学“理论之光”暑期社会实践校级重点团队名单&lt;/strong&gt;"><strong>2015年东北大学“理论之光”暑期社会实践校级重点团队名单</strong></a>
+                                </li>
+                                <li>
+                                    <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0608/14449.html"
+                                       title="&lt;strong&gt;东北大学2015年大学生暑期社会实践立项启动通知&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践立项启动通知</strong></a>
+                                </li>
 
-                                            </ul>
-
-                                        </dd>
-                                    </dl>
-                                    <!-- 站内公告滚动代码调用开始 -->
-                                    <script language="JavaScript" type="text/javascript">
-                                        var scroll2 = new ScrollText("breakNewsList", "pre2", "next2", true, 40, true);
-                                        scroll2.LineHeight = 200;
-                                    </script>
-                                    <!-- 站内公告滚动代码调用结束 -->
-                                </div>
-                            </div>
+                            </ul>
+                            <!-- 站内公告滚动代码调用开始 -->
+                            <script language="JavaScript" type="text/javascript">
+                                var scroll2 = new ScrollText("breakNewsList", "pre2", "next2", true, 40, true);
+                                scroll2.LineHeight = 200;
+                            </script>
+                            <!-- 站内公告滚动代码调用结束 -->
                         </div>
-
                     </div>
                 </div>
                 <div class="content_block_1">
@@ -380,14 +418,14 @@
 
                         <div class="more"><a href="#">更多</a></div>
                     </div>
-
+                    hello
                 </div>
                 <div id="leader_mail">
 
                 </div>
                 <div id="branch_links">
                     <div class="right_header"><span class="Title_text">部门在线</span></div>
-
+                    hello
                 </div>
             </div>
         </div>
