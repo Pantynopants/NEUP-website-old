@@ -65,6 +65,7 @@
 #middle_2 {
     margin: 0 auto 10px auto;
 }
+
 .content_block_1 {
     display: inline-block;
     *display: inline;
@@ -80,6 +81,11 @@
     background: red;
     text-align: left;
 }
+/*.block_1_content{*/
+    /*height: 170px;*/
+    /*width: 390px;*/
+    /*background: yellow;*/
+/*}*/
 .Title_text {
     line-height: 30px;
     float: left;
