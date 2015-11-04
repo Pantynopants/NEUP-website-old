@@ -51,7 +51,7 @@
     display: inline-block;
     *display: inline;
     zoom: 1;
-    margin-left: 6px;
+    margin-left: 4px;
     width: 690px;
     height: 300px;
     background: yellow;
@@ -129,17 +129,17 @@
     display: inline-block;
     *display: inline;
     zoom: 1;
-    width: 400px;
+    width: 390px;
     height: 400px;
     background: green;
 }
 #spec_info, #leader_mail, #branch_links {
     background: yellow;
-    width: 400px;
+    width: 390px;
     margin: 5px 0;
 }
 .right_header {
-    width: 400px;
+    width: 390px;
     height: 30px;
     background: red;
 }
