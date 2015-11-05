@@ -36,7 +36,7 @@
 .small_image:hover {
     height: 66px;
     width: 88px;
-    border: solid 1px red;
+    /*border: solid 1px red;*/
     float: right;
     margin: 20px 3px 0px 3px;
 }
