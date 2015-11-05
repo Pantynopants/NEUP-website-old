@@ -10,8 +10,10 @@
     <link href="./assets/style/dropdown.css" rel="stylesheet" media="screen" type="text/css"/>
     <link href="./assets/style/notice.css" rel="stylesheet" media="screen" type="text/css"/>
 
-    <link href=".assets/style/dedecms.css" rel="stylesheet" media="screen" type="text/css">
+    <link href="assets/style/dedecms.css" rel="stylesheet" media="screen" type="text/css">
     <link href="assets/style/image_roll.css" rel="stylesheet" media="screen" type="text/css">
+
+    <link rel="stylesheet" href="assets/style/style.css">
 
     <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     <script language="javascript" type="text/javascript">
@@ -283,8 +285,52 @@
             </div>
         </div>
         <div id="middle_links">
-            These are some links.
+            <div style="width: 1200px;margin: 0px auto" class="banner has-dots">
+                <ul>
+                    <li style="background-image: url(static/1.gif); width: 1200px;height: 250px"></li>
+                    <li style="background-image: url(static/2.png); width: 1200px;height: 250px"></li>
+                    <li style="background-image: url(static/3.png); width: 1200px;height: 250px"></li>
+                </ul>
+            </div>
         </div>
+        <script src="mods/jquery_002.js"></script>
+        <script src="mods/unslider.js"></script>
+        <script>
+            if (window.chrome) {
+                $('.banner li').css('background-size', '100% 100%');
+            }
+
+            $('.banner').unslider({
+//        arrows: true,
+                arrows: false,
+                fluid: true,
+                dots: true
+            });
+
+            //  Find any element starting with a # in the URL
+            //  And listen to any click events it fires
+            $('a[href^="#"]').click(function () {
+                //  Find the target element
+                var target = $($(this).attr('href'));
+
+                //  And get its position
+                var pos = target.offset(); // fallback to scrolling to top || {left: 0, top: 0};
+
+                //  jQuery will return false if there's no element
+                //  and your code will throw errors if it tries to do .offset().left;
+                if (pos) {
+                    //  Scroll the page
+                    $('html, body').animate({
+                        scrollTop: pos.top,
+                        scrollLeft: pos.left
+                    }, 1000);
+                }
+
+                //  Don't let them visit the url, we'll scroll you there
+                return false;
+            });
+        </script>
+
         <div id="middle_2">
             <div class="content_block_1">
                 <div class="block_1_header"><span class="Title_text">站内公告</span>
