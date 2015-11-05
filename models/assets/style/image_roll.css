@@ -1,0 +1,48 @@
+.image {
+    height: 300px;
+    width: 500px;
+    margin: auto;
+    /*border: solid 1px red;*/
+}
+
+.image #left_image {
+    float: left;
+}
+
+.image #right_image {
+    height: 300px;
+    width: 95px;
+    /*border: solid 1px red;*/
+    background-color: #444444;
+    float: right;
+}
+
+.image .small_image {
+
+    height: 63px;
+    width: 84px;
+    /*border: solid 1px red;*/
+    float: right;
+    margin: 20px 5px 0px 5px;
+    /*display: inline-block;*/
+    /*background-color: #E9E9E4;*/
+}
+
+.image .more {
+    float: right;
+    margin: 20px 10px 10px 10px;
+}
+
+.small_image:hover {
+    height: 66px;
+    width: 88px;
+    border: solid 1px red;
+    float: right;
+    margin: 20px 3px 0px 3px;
+}
+
+#left_image #description {
+    position: relative;
+    margin-top: -27px;
+    background-color: rgba(33, 166, 180, 0.8);
+}

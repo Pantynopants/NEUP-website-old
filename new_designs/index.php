@@ -1,168 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title>NEU Pioneer</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" href="./assets/style/base.css" type="text/css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="./assets/style/home.css" type="text/css" media="screen" charset="utf-8">
-
-    <link href="./assets/style/dropdown.css" rel="stylesheet" media="screen" type="text/css"/>
-    <link href="./assets/style/notice.css" rel="stylesheet" media="screen" type="text/css"/>
-
-    <link href=".assets/style/dedecms.css" rel="stylesheet" media="screen" type="text/css">
-    <link href="assets/style/image_roll.css" rel="stylesheet" media="screen" type="text/css">
-
-    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-    <script language="javascript" type="text/javascript">
-        function ScrollText(content, btnPrevious, btnNext, autoStart, timeout, isSmoothScroll) {
-            this.Speed = 10;
-            this.Timeout = timeout;
-            this.stopscroll = false;//是否停止滚动的标志位
-            this.isSmoothScroll = isSmoothScroll;//是否平滑连续滚动
-            this.LineHeight = 20;//默认高度。可以在外部根据需要设置
-            this.NextButton = this.$(btnNext);
-            this.PreviousButton = this.$(btnPrevious);
-            this.ScrollContent = this.$(content);
-            this.ScrollContent.innerHTML += this.ScrollContent.innerHTML;//为了平滑滚动再加一遍
-
-            if (this.PreviousButton) {
-                this.PreviousButton.onclick = this.GetFunction(this, "Previous");
-                this.PreviousButton.onmouseover = this.GetFunction(this, "MouseOver");
-                this.PreviousButton.onmouseout = this.GetFunction(this, "MouseOut");
-            }
-            if (this.NextButton) {
-                this.NextButton.onclick = this.GetFunction(this, "Next");
-                this.NextButton.onmouseover = this.GetFunction(this, "MouseOver");
-                this.NextButton.onmouseout = this.GetFunction(this, "MouseOut");
-            }
-            this.ScrollContent.onmouseover = this.GetFunction(this, "MouseOver");
-            this.ScrollContent.onmouseout = this.GetFunction(this, "MouseOut");
-
-            if (autoStart) {
-                this.Start();
-            }
-        }
-        ScrollText.prototype = {
-
-            $: function (element) {
-                return document.getElementById(element);
-            },
-            Previous: function () {
-                this.stopscroll = true;
-                this.Scroll("up");
-            },
-            Next: function () {
-                this.stopscroll = true;
-                this.Scroll("down");
-            },
-            Start: function () {
-                if (this.isSmoothScroll) {
-                    this.AutoScrollTimer = setInterval(this.GetFunction(this, "SmoothScroll"), this.Timeout);
-                }
-                else {
-                    this.AutoScrollTimer = setInterval(this.GetFunction(this, "AutoScroll"), this.Timeout);
-                }
-            },
-            Stop: function () {
-                clearTimeout(this.AutoScrollTimer);
-                this.DelayTimerStop = 0;
-            },
-            MouseOver: function () {
-                this.stopscroll = true;
-            },
-            MouseOut: function () {
-                this.stopscroll = false;
-            },
-            AutoScroll: function () {
-                if (this.stopscroll) {
-                    return;
-                }
-                this.ScrollContent.scrollTop++;
-                if (parseInt(this.ScrollContent.scrollTop) % this.LineHeight != 0) {
-                    this.ScrollTimer = setTimeout(this.GetFunction(this, "AutoScroll"), this.Speed);
-                }
-                else {
-                    if (parseInt(this.ScrollContent.scrollTop) >= parseInt(this.ScrollContent.scrollHeight) / 2) {
-                        this.ScrollContent.scrollTop = 0;
-                    }
-                    clearTimeout(this.ScrollTimer);
-                    //this.AutoScrollTimer = setTimeout(this.GetFunction(this,"AutoScroll"), this.Timeout);
-                }
-            },
-            SmoothScroll: function () {
-                if (this.stopscroll) {
-                    return;
-                }
-                this.ScrollContent.scrollTop++;
-                if (parseInt(this.ScrollContent.scrollTop) >= parseInt(this.ScrollContent.scrollHeight) / 2) {
-                    this.ScrollContent.scrollTop = 0;
-                }
-            },
-            Scroll: function (direction) {
-
-                if (direction == "up") {
-                    this.ScrollContent.scrollTop--;
-                }
-                else {
-                    this.ScrollContent.scrollTop++;
-                }
-                if (parseInt(this.ScrollContent.scrollTop) >= parseInt(this.ScrollContent.scrollHeight) / 2) {
-                    this.ScrollContent.scrollTop = 0;
-                }
-                else if (parseInt(this.ScrollContent.scrollTop) <= 0) {
-                    this.ScrollContent.scrollTop = parseInt(this.ScrollContent.scrollHeight) / 2;
-                }
-
-                if (parseInt(this.ScrollContent.scrollTop) % this.LineHeight != 0) {
-                    this.ScrollTimer = setTimeout(this.GetFunction(this, "Scroll", direction), this.Speed);
-                }
-            },
-            GetFunction: function (variable, method, param) {
-                return function () {
-                    variable[method](param);
-                }
-            }
-        }
-        function ignoreError() {
-            return true;
-        }
-        window.onerror = ignoreError;
-    </script>
-
-    <script type="text/JavaScript">
-        var banArray = new Array(3);
-        var counter = 1;
-        if (document.images) {
-            for (i = 0; i < 3; i++) {
-                banArray[i] = new Image(468, 60);
-                banArray[i].src = "static/" + (i + 1) + ".jpg";
-            }
-        }
-        function changeBanner() {
-            if (counter > 2)
-                counter = 0;
-            document.banner.src = banArray[counter].src; //sets a new banner
-            counter++;
-        }
-        var timer = window.setInterval("changeBanner()", 4000);
-        function show(number) {
-            clearInterval(timer);
-            document.banner.src = "static/" + number + ".jpg";
-            counter = number;
-            timer = window.setInterval("changeBanner()", 4000);
-        }
-    </script>
-</head>
-
+<?php get_header();?>
 <body>
-
 <div id="container" style="background-color: red;">
 
     <div id="header">
         <div id="header_pic">
             <div class="banner">
-                <embed src="static/banner1.swf"
+                <embed src="<?php bloginfo('template_url'); ?>/static/banner1.swf"
                        pluginspage="http://www.neupioneer.com/go/getflashplayer" type="application/x-shockwave-flash"
                        name="obj1" palette="white|white" height="200" width="1200px">
             </div>
@@ -232,7 +75,7 @@
                 <div id="image_roll">
                     <div class="image">
                         <div id="left_image">
-                            <a href="#"><img src="static/1.jpg" width=400px height=300px
+                            <a href="#"><img src="<?php bloginfo('template_url'); ?>/static/1.jpg" width=400px height=300px
                                              border=0 name="banner"></a>
 
                             <div id="description">
@@ -242,18 +85,18 @@
                         <div id="right_image">
                             <div class="small_image">
                                 <a onclick="show(1)">
-                                    <img src="static/1.jpg" width="88px" height="66px">
+                                    <img src="<?php bloginfo('template_url'); ?>/static/1.jpg" width="88px" height="66px">
                                 </a>
                             </div>
                             <div class="small_image">
                                 <a onclick="show(2)">
-                                    <img src="static/2.jpg" width="88px" height="66px">
+                                    <img src="<?php bloginfo('template_url'); ?>/static/2.jpg" width="88px" height="66px">
                                 </a>
                             </div>
 
                             <div class="small_image">
                                 <a onclick="show(3)">
-                                    <img src="static/3.jpg" width="88px" height="66px">
+                                    <img src="<?php bloginfo('template_url'); ?>/static/3.jpg" width="88px" height="66px">
                                 </a>
                             </div>
                             <div class="more"><a href="" style="text-decoration: none;color: red"> 更多> </a></div>
@@ -294,7 +137,19 @@
                         <div class="block_1_content">
                             <div class="announce mt1">
                                 <ul class="c1 ico2" id="breakNewsList">
-                                    <li>
+                                    <?php
+                                    query_posts('category_name=站内公告');
+                                    if(have_posts())
+                                    {
+                                        while(have_posts())
+                                        {
+                                            the_post();?>
+                                            <li><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></li>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                    <!--<li>
                                         <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14987.html"
                                            title="关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知">关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知</a>
                                     </li>
@@ -371,7 +226,7 @@
                                     <li>
                                         <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0608/14449.html"
                                            title="&lt;strong&gt;东北大学2015年大学生暑期社会实践立项启动通知&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践立项启动通知</strong></a>
-                                    </li>
+                                    </li>-->
 
                                 </ul>
                                 <!-- 站内公告滚动代码调用开始 -->
@@ -389,12 +244,23 @@
                             <div class="more"><a href="#">更多</a></div>
                         </div>
                         <div class="block_1_content">
-                            hello
+                            <?php
+                                query_posts("category_name=本月热点");
+                                if(have_posts())
+                                {
+                                    while(have_posts())
+                                    {
+                                        the_post();?>
+                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
+                                        <?php
+                                    }
+                                }
+                            ?>
                         </div>
                     </div>
                     <div class="content_block_1">
                         <div class="block_1_header"><span class="Title_text">先锋校历</span>
-
+                            
                             <div class="more"><a href="#">更多</a></div>
                         </div>
                         <div class="block_1_content">
@@ -405,36 +271,109 @@
                 <div id="middle_left">
                     <div id="left_part">
                         <div class="big_content">
-                            <div class="content_header"><span class="Title_text">Inbox Content</span>
-
+                            <div class="content_header"><span class="Title_text">青春正能量</span>
+                            <?php
+                                query_posts("category_name=青春正能量");
+                                if(have_posts())
+                                {
+                                    while(have_posts())
+                                    {
+                                        the_post();?>
+                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
+                                        <?php
+                                    }
+                                }
+                            ?>  
                                 <div class="more"><a href="#">更多</a></div>
                             </div>
                         </div>
                         <div class="big_content">
-                            <div class="content_header"><span class="Title_text">Inbox Content</span>
-
+                            <div class="content_header"><span class="Title_text">学习之路</span>
+                            <?php
+                                query_posts("category_name=学习之路");
+                                if(have_posts())
+                                {
+                                    while(have_posts())
+                                    {
+                                        the_post();?>
+                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
+                                        <?php
+                                    }
+                                }
+                            ?>
                                 <div class="more"><a href="#">更多</a></div>
                             </div>
                         </div>
                     </div>
                     <div id="right_part">
                         <div class="small_content">
-                            <div class="content_header"><span class="Title_text">Inbox Content</span>
-
+                            <div class="content_header"><span class="Title_text">热点追踪</span>
+                                <br>
+                            <?php
+                                query_posts("category_name=热点追踪");
+                                if(have_posts())
+                                {
+                                    while(have_posts())
+                                    {
+                                        the_post();?>
+                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
+                                        <?php
+                                    }
+                                }
+                            ?>
                                 <div class="more"><a href="#">更多</a></div>
                             </div>
                         </div>
                         <div class="small_content">
-                            <div class="content_header"><span class="Title_text">Inbox Content</span>
-
+                            <div class="content_header"><span class="Title_text">学院风采</span>
+                            <?php
+                                query_posts("category_name=学院风采");
+                                if(have_posts())
+                                {
+                                    while(have_posts())
+                                    {
+                                        the_post();?>
+                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
+                                        <?php
+                                    }
+                                }
+                            ?>
                                 <div class="more"><a href="#">更多</a></div>
                             </div>
                         </div>
                         <div class="small_content">
-                            <div class="content_header"><span class="Title_text">Inbox Content</span>
-
+                            <div class="content_header"><span class="Title_text">东大社团</span>
+                            <?php
+                                query_posts("category_name=东大社团");
+                                if(have_posts())
+                                {
+                                    while(have_posts())
+                                    {
+                                        the_post();?>
+                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
+                                        <?php
+                                    }
+                                }
+                            ?>
                                 <div class="more"><a href="#">更多</a></div>
                             </div>
+                        </div>
+                        <!--<div class="small_content">
+                            <div class="content_header"><span class="Title_text">理论学习</span>
+                            <?php
+                                query_posts("category_name=理论学习");
+                                if(have_posts())
+                                {
+                                    while(have_posts())
+                                    {
+                                        the_post();?>
+                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
+                                        <?php
+                                    }
+                                }
+                            ?>
+                                <div class="more"><a href="#">更多</a></div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -455,10 +394,4 @@
                     </div>
                 </div>
             </div>
-            <div id="footer">
-                This is footer
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+            <?php get_footer();?>
