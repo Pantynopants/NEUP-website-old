@@ -10,8 +10,6 @@
 
     <link href="./assets/style/dropdown.css" rel="stylesheet" media="screen" type="text/css"/>
     <link href="./assets/style/notice.css" rel="stylesheet" media="screen" type="text/css"/>
-
-    <link href="assets/style/dedecms.css" rel="stylesheet" media="screen" type="text/css">
     <link href="assets/style/image_roll.css" rel="stylesheet" media="screen" type="text/css">
 
     <link rel="stylesheet" href="assets/style/style.css">
@@ -145,13 +143,13 @@
         function changeBanner() {
             if (counter > 2)
                 counter = 0;
-            document.banner.src = banArray[counter].src; //sets a new banner
+            document.image_roll.src = banArray[counter].src; //sets a new banner
             counter++;
         }
         var timer = window.setInterval("changeBanner()", 4000);
         function show(number) {
             clearInterval(timer);
-            document.banner.src = "static/" + number + ".jpg";
+            document.image_roll.src = "static/" + number + ".jpg";
             counter = number;
             timer = window.setInterval("changeBanner()", 4000);
         }
@@ -164,7 +162,7 @@
 
     <div id="header">
         <div id="header_pic">
-            <div class="banner">
+            <div class="banner1">
                 <embed src="static/banner1.swf"
                        pluginspage="http://www.neupioneer.com/go/getflashplayer" type="application/x-shockwave-flash"
                        name="obj1" palette="white|white" height="200" width="1200px">
@@ -236,7 +234,7 @@
                 <div class="image">
                     <div id="left_image">
                         <a href="#"><img src="static/1.jpg" width=400px height=300px
-                                         border=0 name="banner"></a>
+                                         border=0 name="image_roll"></a>
 
                         <div id="description">
                             <span>description...</span>
