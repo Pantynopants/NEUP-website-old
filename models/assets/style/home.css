@@ -26,7 +26,7 @@
     font-size: 18px;
     margin-left: 20px;
     line-height: 30px;
-    background: green;
+    background: red;
 }
 #search {
     float: right;
@@ -112,6 +112,19 @@
     width: 380px;
     background: yellow;
 }
+/*.block_1_content a{*/
+    /*text-decoration: none;*/
+/*}*/
+.content_1_content{
+    height: 160px;
+    width: 390px;
+    background-color: #3d31ff;
+}
+.content_2_content{
+    height: 95px;
+    width: 390px;
+    background-color: #3d31ff;
+}
 .Title_text {
     line-height: 30px;
     float: left;
@@ -161,17 +174,21 @@
     display: inline-block;
     *display: inline;
     zoom: 1;
-    width: 390px;
+    width: 380px;
     height: 400px;
     background: green;
 }
+.right_content{
+    height: 370px;
+    width: 380px;
+}
 #spec_info, #leader_mail, #branch_links {
     background: yellow;
-    width: 390px;
+    width: 380px;
     margin: 5px 0;
 }
 .right_header {
-    width: 390px;
+    width: 380px;
     height: 30px;
     background: red;
 }
