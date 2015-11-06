@@ -128,14 +128,14 @@
                 <div id="middle_links">
                     <div style="width: 1200px;margin: 0px auto" class="banner has-dots">
                         <ul>
-                            <li style="background-image: url(static/1.gif); width: 1200px;height: 250px"></li>
-                            <li style="background-image: url(static/2.png); width: 1200px;height: 250px"></li>
-                            <li style="background-image: url(static/3.png); width: 1200px;height: 250px"></li>
+                            <li style="background-image: url(<?php bloginfo('template_url'); ?>/static/1.gif); width: 1200px;height: 250px"></li>
+                            <li style="background-image: url(<?php bloginfo('template_url'); ?>/static/2.png); width: 1200px;height: 250px"></li>
+                            <li style="background-image: url(<?php bloginfo('template_url'); ?>/static/3.png); width: 1200px;height: 250px"></li>
                         </ul>
                     </div>
                 </div>
-                <script src="mods/jquery_002.js"></script>
-        <script src="mods/unslider.js"></script>
+                <script src="<?php bloginfo('template_url'); ?>/mods/jquery_002.js"></script>
+        <script src="<?php bloginfo('template_url'); ?>/mods/unslider.js"></script>
         <script>
             if (window.chrome) {
                 $('.banner li').css('background-size', '100% 100%');
