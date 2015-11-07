@@ -129,6 +129,8 @@
             return true;
         }
         window.onerror = ignoreError;
+
+
     </script>
 
     <script type="text/JavaScript">
@@ -153,6 +155,8 @@
             counter = number;
             timer = window.setInterval("changeBanner()", 4000);
         }
+
+
     </script>
 </head>
 
@@ -170,10 +174,14 @@
             <!-- /banner -->
         </div>
         <div id="navigator">
-            <div id="welcome"><span>欢迎访问东北大学团委先锋网</span>
-
+            <div id="welcome">
+                <div class="float">
+                    <span><marquee direction="left" scrolldelay="3">欢迎访问东北大学团委先锋网</marquee></span>
+                </div>
                 <div id="search">
-                    <input type="text" style="width: 200px;" placeholder="请输入要查找的内容"><input type="button" value="提交">
+                    <div style="float:right">
+                        <input type="text" style="width: 200px;" placeholder="请输入要查找的内容"><input type="button" value="提交">
+                    </div>
                 </div>
             </div>
             <nav>
@@ -328,6 +336,8 @@
                 //  Don't let them visit the url, we'll scroll you there
                 return false;
             });
+
+
         </script>
 
         <div id="middle_2">
@@ -423,6 +433,8 @@
                         <script language="JavaScript" type="text/javascript">
                             var scroll2 = new ScrollText("breakNewsList", "pre2", "next2", true, 40, true);
                             scroll2.LineHeight = 200;
+
+
                         </script>
                         <!-- 站内公告滚动代码调用结束 -->
                     </div>
@@ -466,7 +478,6 @@
                         <a class="article_links" href="">hello</a><br>
                         <a class="article_links" href="">hello</a><br>
                         <a class="article_links" href="">hello</a><br>
-
                     </div>
                 </div>
                 <div class="big_content">
