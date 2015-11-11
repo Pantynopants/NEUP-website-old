@@ -1,0 +1,52 @@
+body{
+    background-color: grey;
+}
+
+.header{
+    /*border: solid 1px red;*/
+    /*height: 240px;*/
+    /*width: 1300px;*/
+}
+.header .header_img{
+    border: solid 1px red;
+    height: 240px;
+    width: 1280px;
+    margin: 0px auto;
+}
+.header .navigator{
+    border: solid 1px red;
+    height: 60px;
+    width: 1280px;
+
+    margin: 10px auto;
+}
+.container{
+
+}
+.container .first_line{
+    height: 330px;
+    width: 1000px;
+    border: solid 1px red;
+    margin: 20px auto;
+}
+.container .second_line{
+    height: 100px;
+    width: 1000px;
+    border: solid 1px red;
+    margin: 20px auto;
+}
+.container .third_line , .container .fourth_line,.container .fifth_line,.container .sixth_line{
+    height: 220px;
+    width: 1000px;
+    border: solid 1px red;
+    margin: 20px auto;
+}
+
+
+.footer{
+    width: 1280px;
+    height: 200px;
+    border: solid 1px red;
+
+    margin: 0px auto;
+}
