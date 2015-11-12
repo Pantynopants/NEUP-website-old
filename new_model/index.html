@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="style/dropdown.css" type="text/css">
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <link rel="stylesheet" href="style/footer.css" type="text/css">
+    <link rel="stylesheet" href="style/multipage.css" type="text/css">
     <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-
+    <!--第一行左侧，换图-->
     <script type="text/JavaScript">
         var banArray = new Array(3);
         var counter = 1;
@@ -32,6 +33,23 @@
             counter = number;
             timer = window.setInterval("changeBanner()", 4000);
         }
+    </script>
+
+    <script language="javascript" type="text/javascript"
+            src="mod/jquery-1.js"></script>
+    <script type="text/javascript"
+            src="mod/common.js"></script>
+    <script>
+        $(function () {
+            //工作聚焦地方传真
+            C.tabs({
+                "params": [
+                    {"nav": "#lm1_1", "con": "#lm1_1con", "sclass": "cur1", "nclass": "cur1_no"},
+                    {"nav": "#lm1_2", "con": "#lm1_2con", "sclass": "cur1", "nclass": "cur1_no"},
+                    {"nav": "#lm1_3", "con": "#lm1_3con", "sclass": "cur1", "nclass": "cur1_no"},
+                ]
+            });
+        });
     </script>
 </head>
 <body>
@@ -125,7 +143,54 @@
             </div>
         </div>
         <div id="multipage">
+            <div class="clearfix" style="height:30px;overflow:hidden;">
+                <a class="cur1_no" id="lm1_1" href="javascript:void(0);" target="_self">
+                    工作聚焦
+                </a>
+                <a class="cur1" id="lm1_2" href="javascript:void(0);" target="_self">
+                    地方传真
+                </a>
+                <a class="cur2" id="lm1_3" href="javascript:void(0);" target="_self">
+                    hello
+                </a>
+            </div>
+            <ul id="lm1_1con" class="hot_list hot_list2"
+                style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
+                <li class="first_css">
+                    <a style="text-align:center;line-height:24px;font-weight:bold;color:red;margin:10px 0;font-size:20px;"
+                       href="http://www.cvf.org.cn/show/4167.html">全国“邻里守望”志愿服务成果展示<br>系列活动在京举行</a>
 
+                    <p><a href="http://www.cvf.org.cn/show/4167.html"
+                          style="color:#000;font-size:12px;font-weight:normal;line-height:18px;height:55px;">　　
+                        由中国志愿服务联合会和中国志愿服务基金会联合主办的全国“邻里守望”志愿服务成果展示系列活动10月12日至20日在北京举行。中央政治局原委员、中国志愿服务联合会会长刘淇出席相关活动。</a>
+                    </p>
+                </li>
+                <li class="bdrb2">
+                    <a href="http://www.cvf.org.cn/show/4195.html" title="刘淇会长出席国际志愿服务交流大会">刘淇会长出席国际志愿服务交流大会</a>
+                    <em>10/21</em>
+                </li>
+                <li>
+                    <a href="http://www.cvf.org.cn/show/4236.html"
+                       title="《志愿服务信息系统基本规范》培训班在京举办">《志愿服务信息系统基本规范》培训班在京举办</a>
+                    <em>10/30</em>
+                </li>
+            </ul>
+            <ul id="lm1_2con" class="hot_list hot_list2"
+                style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
+                <li>
+                    <a href="http://www.cvf.org.cn/show/4255.html" title="济南“泉城志愿服务网”上线运行 开启“志愿云”平台">济南“泉城志愿服务网”上线运行
+                        开启“志愿云”平台</a>
+                    <em>11/06</em>
+                </li>
+            </ul>
+            <ul id="lm1_3con" class="hot_list hot_list2"
+                style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
+                <li>
+                    <a href="http://www.cvf.org.cn/show/3825.html" title="推动志愿服务健康发展  《吉林省志愿服务条例》正式施行">推动志愿服务健康发展
+                        《吉林省志愿服务条例》正式施行</a>
+                    <em>08/31</em>
+                </li>
+            </ul>
         </div>
 
     </div>
@@ -216,7 +281,7 @@
             </div>
         </div>
         <div id="fifth_mid">
-<div class="block_head">
+            <div class="block_head">
                 微博
             </div>
         </div>
@@ -248,27 +313,23 @@
 <div class="footer">
     <div class="content">
         <!--<a class="icon"><img src="static/neupicon.jpg" alt="icon">&nbsp;&nbsp;&nbsp;&nbsp;先锋网</a>-->
-
         <div class="site-info">
             <a href="">网站纠错</a><span>&nbsp;&nbsp;|&nbsp;</span>
             <a href="">关于我们</a><span>&nbsp;&nbsp;|&nbsp;</span>
             <a href="">联系我们</a><span>&nbsp;&nbsp;|&nbsp;</span>
             <a href="">设为首页</a><span>&nbsp;&nbsp;|&nbsp;</span>
             <a href="">加入收藏</a>
-            <br>
-            <br>
+            <br><br>
             <hr>
             <br>
             <span class="copyright">版权所有：东北大学团委</span>
             <br>
-
             <span class="icp">Copyright</span>
             <br>
-
-                <span class="icp">地址：xxxxx<span>&nbsp;|&nbsp;</span>
-                    邮编：110000<span>&nbsp;|&nbsp;</span>
-                    电话：8008208820
-                </span>
+            <span class="icp">地址：xxxxx<span>&nbsp;|&nbsp;</span>
+                邮编：110000<span>&nbsp;|&nbsp;</span>
+                电话：8008208820
+            </span>
         </div>
     </div>
 </div>
