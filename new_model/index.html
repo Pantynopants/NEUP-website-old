@@ -39,18 +39,6 @@
             src="mod/jquery-1.js"></script>
     <script type="text/javascript"
             src="mod/common.js"></script>
-    <script>
-        $(function () {
-            //工作聚焦地方传真
-            C.tabs({
-                "params": [
-                    {"nav": "#lm1_1", "con": "#lm1_1con", "sclass": "cur1", "nclass": "cur1_no"},
-                    {"nav": "#lm1_2", "con": "#lm1_2con", "sclass": "cur1", "nclass": "cur1_no"},
-                    {"nav": "#lm1_3", "con": "#lm1_3con", "sclass": "cur1", "nclass": "cur1_no"},
-                ]
-            });
-        });
-    </script>
 </head>
 <body>
 <div class="header">
@@ -143,64 +131,35 @@
             </div>
         </div>
         <div id="multipage">
-            <div class="clearfix" style="height:30px;overflow:hidden;">
-                <a class="cur1_no" id="lm1_1" href="javascript:void(0);" target="_self">
-                    工作聚焦
-                </a>
-                <a class="cur1" id="lm1_2" href="javascript:void(0);" target="_self">
-                    地方传真
-                </a>
-                <a class="cur2" id="lm1_3" href="javascript:void(0);" target="_self">
-                    hello
-                </a>
-            </div>
-            <ul id="lm1_1con" class="hot_list hot_list2"
-                style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
-                <li class="first_css">
-                    <a style="text-align:center;line-height:24px;font-weight:bold;color:red;margin:10px 0;font-size:20px;"
-                       href="http://www.cvf.org.cn/show/4167.html">全国“邻里守望”志愿服务成果展示<br>系列活动在京举行</a>
+            <div id="up">
+                <div class="mul_head">
+                    先锋头条
+                </div>
+                <div class="mul_content">
 
-                    <p><a href="http://www.cvf.org.cn/show/4167.html"
-                          style="color:#000;font-size:12px;font-weight:normal;line-height:18px;height:55px;">　　
-                        由中国志愿服务联合会和中国志愿服务基金会联合主办的全国“邻里守望”志愿服务成果展示系列活动10月12日至20日在北京举行。中央政治局原委员、中国志愿服务联合会会长刘淇出席相关活动。</a>
-                    </p>
-                </li>
-                <li class="bdrb2">
-                    <a href="http://www.cvf.org.cn/show/4195.html" title="刘淇会长出席国际志愿服务交流大会">刘淇会长出席国际志愿服务交流大会</a>
-                    <em>10/21</em>
-                </li>
-                <li>
-                    <a href="http://www.cvf.org.cn/show/4236.html"
-                       title="《志愿服务信息系统基本规范》培训班在京举办">《志愿服务信息系统基本规范》培训班在京举办</a>
-                    <em>10/30</em>
-                </li>
-            </ul>
-            <ul id="lm1_2con" class="hot_list hot_list2"
-                style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
-                <li>
-                    <a href="http://www.cvf.org.cn/show/4255.html" title="济南“泉城志愿服务网”上线运行 开启“志愿云”平台">济南“泉城志愿服务网”上线运行
-                        开启“志愿云”平台</a>
-                    <em>11/06</em>
-                </li>
-            </ul>
-            <ul id="lm1_3con" class="hot_list hot_list2"
-                style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
-                <li>
-                    <a href="http://www.cvf.org.cn/show/3825.html" title="推动志愿服务健康发展  《吉林省志愿服务条例》正式施行">推动志愿服务健康发展
-                        《吉林省志愿服务条例》正式施行</a>
-                    <em>08/31</em>
-                </li>
-            </ul>
+                </div>
+            </div>
+            <div id="down">
+                <div class="mul_head">
+                    外媒报导
+                </div>
+                <div class="mul_content">
+
+                </div>
+            </div>
         </div>
 
     </div>
     <div class="second_line">
+        <div class="block_head">
+            专题
+        </div>
         <div id="image">
             <div style="width: 1200px;margin: 0px auto" class="banner has-dots">
                 <ul>
-                    <li style="background-image: url(static/1.gif); width: 1000px;height: 100px"></li>
-                    <li style="background-image: url(static/2.png); width: 1000px;height: 100px"></li>
-                    <li style="background-image: url(static/3.png); width: 1000px;height: 100px"></li>
+                    <li style="background-image: url(static/1.gif); width: 1000px;height: 90px"></li>
+                    <li style="background-image: url(static/2.png); width: 1000px;height: 90px"></li>
+                    <li style="background-image: url(static/3.png); width: 1000px;height: 90px"></li>
                 </ul>
             </div>
         </div>
@@ -246,31 +205,211 @@
     </div>
     <div class="third_line">
         <div id="third_left">
-            <div class="block_head">
-                先锋新闻
+            <div class="block_content" style="height: 220px">
+                <div class="clearfix" style="height:30px;overflow:hidden;">
+                    <a class="cur1_no" id="neup_news_1" href="javascript:void(0);" target="_self">
+                        title1
+                    </a>
+                    <a class="cur1" id="neup_news_2" href="javascript:void(0);" target="_self">
+                        title2
+                    </a>
+                    <a class="cur1" id="neup_news_3" href="javascript:void(0);" target="_self">
+                        title3
+                    </a>
+                </div>
+                <ul id="neup_news_1con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
+                    <li class="first_css">
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                    </li>
+                </ul>
+                <ul id="neup_news_2con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
+                    <li>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <em>11/06</em>
+                    </li>
+                </ul>
+                <ul id="neup_news_3con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
+                    <li>
+                        <a>hello,world</a>
+                        <em>08/31</em>
+                    </li>
+                </ul>
             </div>
         </div>
         <div id="third_right">
-            <div class="block_head">
-                先锋公告
-            </div>
-            <div class="block_content">
-
+            <div class="block_content" style="height: 220px">
+                <div class="clearfix" style="height:30px;overflow:hidden;">
+                    <a class="cur1_no" id="tr_1" href="javascript:void(0);" target="_self">
+                        title1
+                    </a>
+                    <a class="cur1" id="tr_2" href="javascript:void(0);" target="_self">
+                        title2
+                    </a>
+                    <a class="cur2" id="tr_3" href="javascript:void(0);" target="_self">
+                        title3
+                    </a>
+                </div>
+                <ul id="tr_1con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
+                    <li class="first_css">
+                        <a>hello,world</a>
+                    </li>
+                </ul>
+                <ul id="tr_2con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
+                    <li>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <em>11/06</em>
+                    </li>
+                </ul>
+                <ul id="tr_3con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
+                    <li>
+                        <a>hello,world</a>
+                        <em>08/31</em>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="fourth_line">
-        <div id="fourth_left">
+    <div class="middle_up_line">
+        <div id="up_left">
             <div class="block_head">
-                先锋活动
-            </div>
-        </div>
-        <div id="fourth_right">
-            <div class="block_head">
-                先锋校历
+                思想引领行动
             </div>
             <div class="block_content">
-
+                <div class="clearfix" style="height:30px;overflow:hidden;">
+                    <a class="cur1_no" id="mid_upl_1" href="javascript:void(0);" target="_self">
+                        title1
+                    </a>
+                    <a class="cur1" id="mid_upl_2" href="javascript:void(0);" target="_self">
+                        title2
+                    </a>
+                </div>
+                <ul id="mid_upl_1con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
+                    <li class="first_css">
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                    </li>
+                </ul>
+                <ul id="mid_upl_2con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
+                    <li>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <em>11/06</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="up_right">
+            <div class="block_head">
+                素质拓展行动
+            </div>
+            <div class="block_content">
+                <div class="clearfix" style="height:30px;overflow:hidden;">
+                    <a class="cur1_no" id="mid_upr_1" href="javascript:void(0);" target="_self">
+                        title1
+                    </a>
+                    <a class="cur1" id="mid_upr_2" href="javascript:void(0);" target="_self">
+                        title2
+                    </a>
+                </div>
+                <ul id="mid_upr_1con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
+                    <li class="first_css">
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                    </li>
+                </ul>
+                <ul id="mid_upr_2con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
+                    <li>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <em>11/06</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="middle_down_line">
+        <div id="down_left">
+            <div class="block_head">
+                权益服务行动
+            </div>
+            <div class="block_content">
+                <div class="clearfix" style="height:30px;overflow:hidden;">
+                    <a class="cur1_no" id="mid_downl_1" href="javascript:void(0);" target="_self">
+                        title1
+                    </a>
+                    <a class="cur1" id="mid_downl_2" href="javascript:void(0);" target="_self">
+                        title2
+                    </a>
+                </div>
+                <ul id="mid_downl_1con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
+                    <li class="first_css">
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                    </li>
+                </ul>
+                <ul id="mid_downl_2con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
+                    <li>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <em>11/06</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="down_right">
+            <div class="block_head">
+                组织提升行动
+            </div>
+            <div class="block_content">
+                <div class="clearfix" style="height:30px;overflow:hidden;">
+                    <a class="cur1_no" id="mid_downr_1" href="javascript:void(0);" target="_self">
+                        title1
+                    </a>
+                    <a class="cur1" id="mid_downr_2" href="javascript:void(0);" target="_self">
+                        title2
+                    </a>
+                </div>
+                <ul id="mid_downr_1con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
+                    <li class="first_css">
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                    </li>
+                </ul>
+                <ul id="mid_downr_2con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
+                    <li>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <em>11/06</em>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -290,7 +429,31 @@
                 先锋排行
             </div>
             <div class="block_content">
-
+                <div class="clearfix" style="height:30px;overflow:hidden;">
+                    <a class="cur1_no" id="rank_1" href="javascript:void(0);" target="_self">
+                        title1
+                    </a>
+                    <a class="cur1" id="rank_2" href="javascript:void(0);" target="_self">
+                        title2
+                    </a>
+                </div>
+                <ul id="rank_1con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
+                    <li class="first_css">
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                    </li>
+                </ul>
+                <ul id="rank_2con" class="hot_list hot_list2"
+                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
+                    <li>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <a>hello,world</a>
+                        <em>11/06</em>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -302,12 +465,15 @@
         </div>
         <div id="sixth_right">
             <div class="block_head">
-                友情链接
+                先锋校历
             </div>
             <div class="block_content">
 
             </div>
         </div>
+    </div>
+    <div class="some_links">
+        some friendly links
     </div>
 </div>
 <div class="footer">
@@ -325,6 +491,7 @@
             <span class="copyright">版权所有：东北大学团委</span>
             <br>
             <span class="icp">Copyright</span>
+            <br>
             <br>
             <span class="icp">地址：xxxxx<span>&nbsp;|&nbsp;</span>
                 邮编：110000<span>&nbsp;|&nbsp;</span>

@@ -48,17 +48,3 @@ a.cur1_no {
     display: block;
     background: url(../static/4.jpg) no-repeat;
 }
-
-a.cur2 {
-    margin-right: 3px;
-    font-family: 微软雅黑;
-    text-align: center;
-    font-size: 14px;
-    line-height: 30px;
-    color: #c5050c;
-    float: left;
-    width: 106px;
-    height: 30px;
-    display: block;
-    background: url(../static/4.jpg) no-repeat;
-}
