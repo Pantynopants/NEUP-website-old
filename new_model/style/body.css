@@ -1,15 +1,14 @@
 body {
-    background-color: grey;
+    background-color: #ffffff;
+    font-family: 微软雅黑;
+    font-size: 17px;
 }
 
-.header {
-    /*border: solid 1px red;*/
-    /*height: 240px;*/
-    /*width: 1300px;*/
-}
-
+/*body {*/
+/*font: 18px Arial, Helvetica, sans-serif, 'Arial Narrow', HELVETICA;*/
+/*}*/
 .header .header_img {
-    border: solid 1px red;
+    /*border: solid 1px red;*/
     height: 240px;
     width: 1280px;
     margin: 0px auto;
@@ -19,12 +18,20 @@ body {
     /*border: solid 1px red;*/
     height: 60px;
     width: 1280px;
-    background-color: pink;
+    background-color: #b6b6b6;
     margin: 10px auto;
 }
 
 .container {
 
+}
+
+.my_border {
+    float: right;
+    background-color: red;
+    width: 77%;;
+    height: 4px;
+    margin-top: 7px;
 }
 
 .container .first_line {
@@ -40,12 +47,14 @@ body {
     width: 1000px;
     margin: 20px auto;
 }
-.container .middle_up_line,.container .middle_down_line{
+
+.container .middle_up_line, .container .middle_down_line {
     height: 240px;
     width: 1000px;
     margin: 20px auto;
     background-color: green;
 }
+
 .container .third_line, .container .fifth_line, .container .sixth_line {
     height: 240px;
     width: 1000px;
@@ -53,18 +62,20 @@ body {
     margin: 20px auto;
     background-color: forestgreen;
 }
-.container .some_links{
+
+.container .some_links {
     height: 100px;
     width: 1000px;
     margin: 10px auto;
     background-color: red;
 }
+
 .footer {
     width: 1280px;
     height: 200px;
     /*border: solid 1px red;*/
     margin: 0px auto;
-    background: #2C6787 ;
+    background: #2C6787;
 }
 
 .container .first_line #img_roll {
@@ -79,16 +90,18 @@ body {
     height: 330px;
     width: 470px;
     float: right;
-    background-color:firebrick;
+    background-color: firebrick;
     margin: 10px;
 }
-.container .middle_up_line #up_left,.container .middle_up_line #up_right,.container .middle_down_line #down_left,.container .middle_down_line #down_right{
+
+.container .middle_up_line #up_left, .container .middle_up_line #up_right, .container .middle_down_line #down_left, .container .middle_down_line #down_right {
     height: 220px;
     width: 480px;
     background-color: #000000;
     float: left;
     margin: 10px;
 }
+
 .container .third_line #third_left, .container .sixth_line #sixth_left {
     height: 220px;
     width: 600px;
@@ -105,14 +118,15 @@ body {
     float: right;
 }
 
-.block_head{
+.block_head {
     width: 100%;
-    height: 18px;
+    height: 20px;
     background-color: cornflowerblue;
 }
-.block_content{
+
+.block_content {
     width: 100%;
-    height: 202px;
+    height: 200px;
     background-color: greenyellow;
 }
 
@@ -123,19 +137,22 @@ body {
     float: left;
     margin: 10px 0px 10px 10px;
 }
-.container .first_line #multipage #up,.container .first_line #multipage #down{
+
+.container .first_line #multipage #up, .container .first_line #multipage #down {
     height: 160px;
     width: 460px;
     background-color: #000000;
     margin: 0px 0px 5px 5px;
 }
-.mul_head{
+
+.mul_head {
     width: 100%;
-    height: 18px;
+    height: 20px;
     background-color: cornflowerblue;
 }
-.mul_content{
-    height: 142px;
+
+.mul_content {
+    height: 140px;
     width: 460px;
     background-color: greenyellow;
 }
