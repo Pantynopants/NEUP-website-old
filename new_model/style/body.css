@@ -1,7 +1,8 @@
 body {
     background-color: #ffffff;
-    font-family: 微软雅黑;
-    font-size: 17px;
+    font-family: "Microsoft YaHei" !important;
+    font-size: 18px;
+    /*font-weight: bold;*/
 }
 
 /*body {*/
@@ -15,6 +16,13 @@ body {
 }
 
 .header .navigator {
+    /*border: solid 1px red;*/
+    height: 60px;
+    width: 1280px;
+    background-color: #b6b6b6;
+    margin: 10px auto;
+}
+.header .nav {
     /*border: solid 1px red;*/
     height: 60px;
     width: 1280px;
@@ -72,7 +80,7 @@ body {
 
 .footer {
     width: 1280px;
-    height: 200px;
+    height: 140px;
     /*border: solid 1px red;*/
     margin: 0px auto;
     background: #2C6787;
@@ -120,7 +128,8 @@ body {
 
 .block_head {
     width: 100%;
-    height: 20px;
+    height: 21px;
+    font-weight: bold;
     background-color: cornflowerblue;
 }
 
@@ -147,8 +156,9 @@ body {
 
 .mul_head {
     width: 100%;
-    height: 20px;
+    height: 21px;
     background-color: cornflowerblue;
+    font-weight: bold;
 }
 
 .mul_content {

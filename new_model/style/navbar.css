@@ -1,0 +1,85 @@
+.h_left a {
+    margin-left: 12px;
+    text-decoration: none;
+}
+
+.heads a {
+    font-size: 12px;
+    color: #fff;
+}
+
+.h_right a {
+    margin-left: 12px;
+    text-decoration: none;
+}
+
+.nav {
+    height: 53px;
+    margin-top: 194px;
+    padding-top: 4px;
+    background: url(http://www.zgzyz.org.cn/pageimg/2015zyz2_dhbg.gif) repeat-x center top;
+}
+
+.naviterm {
+    width: 900px;
+    margin: 0px auto;
+    height: 48px;
+    text-align: left;
+}
+
+.naviterm li {
+    float: left;
+    position: relative;
+    z-index: 9999;
+}
+
+.naviterm .ws1 {
+    color: #111;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Microsoft YaHei" ! important;
+    padding: 0px 16px;
+    height: 48px;
+    display: inline-block;
+    line-height: 48px;
+    text-decoration: none;
+}
+
+.naviterm .ws2 {
+    color: #111;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Microsoft YaHei" ! important;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    margin-left: 17px;
+}
+
+.naviterm .pp {
+    position: absolute;
+    top: 49px;
+    left: -48px;
+    z-index: 2;
+    width: 182px;
+    background: url(http://www.zgzyz.org.cn/pageimg/2015zyzy2_pbg.png) repeat-y center top;
+    display: none;
+}
+
+.naviterm .pp .ul {
+    background: url(http://www.zgzyz.org.cn/pageimg/2015zyz2_ptop.gif) no-repeat center top;
+    border-bottom: 1px solid #ebc9bf;
+    padding-top: 18px;
+    padding-bottom: 8px;
+}
+
+.naviterm .pp .ul .bgsty {
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    width: 182px;
+}
+
+li {
+    list-style: none;
+}
