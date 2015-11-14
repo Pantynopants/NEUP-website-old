@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>jquery hover鼠标滑过选项卡切换 - xw素材网</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+        $(function () {
+            $("#khxgd").css({"z-index": "10"});
+            $("#kmtbd").css({"z-index": "9"});
+            $('.xxktit li').hover(function () {
+                var thisId = $(this).attr("id");
+                $(".kinfo").not($("#k" + thisId)).animate({opacity: 0}, 300);
+                $(".kinfo").not($("#k" + thisId)).css({"z-index": "0"});
+                $(this).addClass("cur");
+                $("#k" + thisId).stop(true, true).animate({opacity: 1.0}, 300);
+                $("#k" + thisId).css({"z-index": "10"});
+            }, function () {
+                var thisId = $(this).attr("id");
+                $(this).removeClass("cur");
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="xxk">
+    <div class="xxktit">
+        <ul>
+            <li id="hxgd"><a href="#">hello,world2</a></li>
+            <li id="mtbd"><a href="#">hello,world3</a></li>
+        </ul>
+    </div>
+    <div id="khxgd" class="kinfo">
+        <ul>
+            <li>
+                <div class="main1_r_l">
+                    <div class="main1_r_bt"><a href="">hello,world2;hello,world2;hello,world2;</a></div>
+                    <div class="main1_r_nr">hello,world2;hello,world2;hello,world2;</div>
+                </div>
+                <!--<div class="main1_r_r">25<span>09</span></div>-->
+                <!--<div class="clear"></div>-->
+            </li>
+            <li>
+                <div class="main1_r_l">
+                    <div class="main1_r_bt"><a href="">hello,world2;hello,world2;hello,world2;</a></div>
+                    <div class="main1_r_nr">hello,world2;hello,world2;hello,world2;</div>
+                </div>
+                <!--<div class="main1_r_r">25<span>09</span></div>-->
+                <!--<div class="clear"></div>-->
+            </li>
+        </ul>
+    </div>
+    <div id="kmtbd" class="kinfo">
+        <ul>
+            <li>
+                <div class="main1_r_l">
+                    <div class="main1_r_bt"><a href="">hello,world</a></div>
+                    <div class="main1_r_nr">hello,world</div>
+                </div>
+                <!--<div class="main1_r_r">05<span>09</span></div>-->
+                <!--<div class="clear"></div>-->
+            </li>
+            <li>
+                <div class="main1_r_l">
+                    <div class="main1_r_bt"><a href="">hello,world</a></div>
+                    <div class="main1_r_nr">hello,world</div>
+                </div>
+                <!--<div class="main1_r_r">05<span>09</span></div>-->
+                <!--<div class="clear"></div>-->
+            </li>
+            <li>
+                <div class="main1_r_l">
+                    <div class="main1_r_bt"><a href="">hello,world</a></div>
+                    <div class="main1_r_nr">hello,world</div>
+                </div>
+                <!--<div class="main1_r_r">05<span>09</span></div>-->
+                <!--<div class="clear"></div>-->
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
