@@ -30,14 +30,10 @@ body {
     margin: 10px auto;
 }
 
-.container {
-
-}
-
 .my_border {
     float: right;
     background-color: red;
-    width: 77%;;
+    width: 76%;;
     height: 4px;
     margin-top: 7px;
 }
@@ -136,7 +132,7 @@ body {
 .block_content {
     width: 100%;
     height: 200px;
-    background-color: greenyellow;
+    background-color: #ffffff;
 }
 
 .container .fifth_line #fifth_left, .container .fifth_line #fifth_mid {

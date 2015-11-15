@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="style/footer.css" type="text/css">
     <link rel="stylesheet" href="style/multipage.css" type="text/css">
     <link rel="stylesheet" href="style/navbar.css" type="text/css">
+    <link rel="stylesheet" href="style/tagPage.css" type="text/css">
+
 
     <script language="javascript" type="text/javascript"
             src="mod/jquery-nav.js"></script>
+    <script language="javascript" type="text/javascript"
+            src="mod/jquery.min.js"></script>
     <!--第一行左侧，换图-->
     <script type="text/JavaScript">
         var banArray = new Array(3);
@@ -74,11 +78,13 @@
                     $('.onli').css("color", "#fff");
                 })
             })
-
         })
     </script>
     <!--导航栏结束-->
 
+    <!--标签页-->
+    <script type="text/javascript" src="mod/tabPage.js"></script>
+    <!--标签页结束-->
 </head>
 <body>
 <div class="header">
@@ -229,7 +235,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div class="second_line">
         <div class="block_head">
@@ -287,78 +292,50 @@
     <div class="third_line">
         <div id="third_left">
             <div class="block_content" style="height: 220px">
-                <div class="clearfix" style="height:30px;overflow:hidden;">
-                    <a class="cur1_no" id="neup_news_1" href="javascript:void(0);" target="_self">
-                        title1
-                    </a>
-                    <a class="cur1" id="neup_news_2" href="javascript:void(0);" target="_self">
-                        title2
-                    </a>
-                    <a class="cur1" id="neup_news_3" href="javascript:void(0);" target="_self">
-                        title3
-                    </a>
+                <div class="tl_title">
+                    <ul>
+                        <li id="tl_1" class="tl" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="tl_2" class="tl"><a href="#">title2</a></li>
+                    </ul>
                 </div>
-                <ul id="neup_news_1con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
-                    <li class="first_css">
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                    </li>
-                </ul>
-                <ul id="neup_news_2con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
-                    <li>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <em>11/06</em>
-                    </li>
-                </ul>
-                <ul id="neup_news_3con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
-                    <li>
-                        <a>hello,world</a>
-                        <em>08/31</em>
-                    </li>
-                </ul>
+                <div id="ktl_1" class="ktl">
+                    <ul>
+                        <li>
+                            <div class="tagText_long"> hello,world1</div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="ktl_2" class="ktl">
+                    <ul>
+                        <li>
+                            <div class="tagText_long"> hello,world2</div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div id="third_right">
             <div class="block_content" style="height: 220px">
-                <div class="clearfix" style="height:30px;overflow:hidden;">
-                    <a class="cur1_no" id="tr_1" href="javascript:void(0);" target="_self">
-                        title1
-                    </a>
-                    <a class="cur1" id="tr_2" href="javascript:void(0);" target="_self">
-                        title2
-                    </a>
-                    <a class="cur2" id="tr_3" href="javascript:void(0);" target="_self">
-                        title3
-                    </a>
+                <div class="tr_title">
+                    <ul>
+                        <li id="tr_1" class="tr" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="tr_2" class="tr"><a href="#">title2</a></li>
+                    </ul>
                 </div>
-                <ul id="tr_1con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
-                    <li class="first_css">
-                        <a>hello,world</a>
-                    </li>
-                </ul>
-                <ul id="tr_2con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
-                    <li>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <em>11/06</em>
-                    </li>
-                </ul>
-                <ul id="tr_3con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
-                    <li>
-                        <a>hello,world</a>
-                        <em>08/31</em>
-                    </li>
-                </ul>
+                <div id="ktr_1" class="ktr">
+                    <ul>
+                        <li>
+                            <div class="tagText_short"> hello,world1</div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="ktr_2" class="ktr">
+                    <ul>
+                        <li>
+                            <div class="tagText_short"> hello,world2</div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -369,31 +346,26 @@
                 <div class="my_border"></div>
             </div>
             <div class="block_content">
-                <div class="clearfix" style="height:30px;overflow:hidden;">
-                    <a class="cur1_no" id="mid_upl_1" href="javascript:void(0);" target="_self">
-                        title1
-                    </a>
-                    <a class="cur1" id="mid_upl_2" href="javascript:void(0);" target="_self">
-                        title2
-                    </a>
+                <div class="ful_title">
+                    <ul>
+                        <li id="ful_1" class="ful" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="ful_2" class="ful"><a href="#">title2</a></li>
+                    </ul>
                 </div>
-                <ul id="mid_upl_1con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
-                    <li class="first_css">
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                    </li>
-                </ul>
-                <ul id="mid_upl_2con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
-                    <li>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <em>11/06</em>
-                    </li>
-                </ul>
+                <div id="kful_1" class="kful">
+                    <ul>
+                        <li>
+                            <div class="tagText"> hello,world1</div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="kful_2" class="kful">
+                    <ul>
+                        <li>
+                            <div class="tagText"> hello,world2</div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div id="up_right">
@@ -402,31 +374,26 @@
                 <div class="my_border"></div>
             </div>
             <div class="block_content">
-                <div class="clearfix" style="height:30px;overflow:hidden;">
-                    <a class="cur1_no" id="mid_upr_1" href="javascript:void(0);" target="_self">
-                        title1
-                    </a>
-                    <a class="cur1" id="mid_upr_2" href="javascript:void(0);" target="_self">
-                        title2
-                    </a>
+                <div class="fur_title">
+                    <ul>
+                        <li id="fur_1" class="fur" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="fur_2" class="fur"><a href="#">title2</a></li>
+                    </ul>
                 </div>
-                <ul id="mid_upr_1con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
-                    <li class="first_css">
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                    </li>
-                </ul>
-                <ul id="mid_upr_2con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
-                    <li>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <em>11/06</em>
-                    </li>
-                </ul>
+                <div id="kfur_1" class="kfur">
+                    <ul>
+                        <li>
+                            <div class="tagText"> hello,world1</div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="kfur_2" class="kfur">
+                    <ul>
+                        <li>
+                            <div class="tagText"> hello,world2</div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -437,31 +404,26 @@
                 <div class="my_border"></div>
             </div>
             <div class="block_content">
-                <div class="clearfix" style="height:30px;overflow:hidden;">
-                    <a class="cur1_no" id="mid_downl_1" href="javascript:void(0);" target="_self">
-                        title1
-                    </a>
-                    <a class="cur1" id="mid_downl_2" href="javascript:void(0);" target="_self">
-                        title2
-                    </a>
+                <div class="fdl_title">
+                    <ul>
+                        <li id="fdl_1" class="fdl" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="fdl_2" class="fdl"><a href="#">title2</a></li>
+                    </ul>
                 </div>
-                <ul id="mid_downl_1con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
-                    <li class="first_css">
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                    </li>
-                </ul>
-                <ul id="mid_downl_2con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
-                    <li>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <em>11/06</em>
-                    </li>
-                </ul>
+                <div id="kfdl_1" class="kfdl">
+                    <ul>
+                        <li>
+                            <div class="tagText"> hello,world1</div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="kfdl_2" class="kfdl">
+                    <ul>
+                        <li>
+                            <div class="tagText"> hello,world2</div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div id="down_right">
@@ -470,31 +432,26 @@
                 <div class="my_border"></div>
             </div>
             <div class="block_content">
-                <div class="clearfix" style="height:30px;overflow:hidden;">
-                    <a class="cur1_no" id="mid_downr_1" href="javascript:void(0);" target="_self">
-                        title1
-                    </a>
-                    <a class="cur1" id="mid_downr_2" href="javascript:void(0);" target="_self">
-                        title2
-                    </a>
+                <div class="fdr_title">
+                    <ul>
+                        <li id="fdr_1" class="fdr" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="fdr_2" class="fdr"><a href="#">title2</a></li>
+                    </ul>
                 </div>
-                <ul id="mid_downr_1con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
-                    <li class="first_css">
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                    </li>
-                </ul>
-                <ul id="mid_downr_2con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
-                    <li>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <em>11/06</em>
-                    </li>
-                </ul>
+                <div id="kfdr_1" class="kfdr">
+                    <ul>
+                        <li>
+                            <div class="tagText"> hello,world1</div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="kfdr_2" class="kfdr">
+                    <ul>
+                        <li>
+                            <div class="tagText"> hello,world2</div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -517,31 +474,27 @@
                 <div class="my_border"></div>
             </div>
             <div class="block_content">
-                <div class="clearfix" style="height:30px;overflow:hidden;">
-                    <a class="cur1_no" id="rank_1" href="javascript:void(0);" target="_self">
-                        title1
-                    </a>
-                    <a class="cur1" id="rank_2" href="javascript:void(0);" target="_self">
-                        title2
-                    </a>
+                <div class="fr_title">
+                    <ul>
+                        <li id="fr_1" class="fr" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="fr_2" class="fr"><a href="#">title2</a></li>
+                    </ul>
                 </div>
-                <ul id="rank_1con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px;">
-                    <li class="first_css">
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                    </li>
-                </ul>
-                <ul id="rank_2con" class="hot_list hot_list2"
-                    style="height: 250px; padding-bottom: 6px; padding-top: 6px; display: none;">
-                    <li>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <a>hello,world</a>
-                        <em>11/06</em>
-                    </li>
-                </ul>
+                <div id="kfr_1" class="kfr">
+                    <ul>
+                        <li>
+                            <div class="tagText_short"> hello,world1</div>
+
+                        </li>
+                    </ul>
+                </div>
+                <div id="kfr_2" class="kfr">
+                    <ul>
+                        <li>
+                            <div class="tagText_short"> hello,world2</div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
