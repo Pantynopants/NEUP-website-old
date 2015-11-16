@@ -2,8 +2,10 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<?php echo get_bloginfo('charset'); ?>"/>
+    <base target="_blank"/>
     <title>
-     <?php 
+        <?php 
         if(is_home())
         {
             bloginfo('name');
@@ -28,133 +30,20 @@
         }
         ?>
     </title>
-    <meta http-equiv="Content-Type" content="text/html; charset=<?php echo get_bloginfo('charset'); ?>"/>
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/style/base.css" type="text/css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/assets/style/home.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style/body.css" type="text/css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style/image_roll.css" type="text/css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style/style.css" type="text/css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style/footer.css" type="text/css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style/multipage.css" type="text/css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style/navbar.css" type="text/css">
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style/tagPage.css" type="text/css">
 
-    <link href="<?php bloginfo('template_url'); ?>/assets/style/dropdown.css" rel="stylesheet" media="screen" type="text/css"/>
-    <link href="<?php bloginfo('template_url'); ?>/assets/style/notice.css" rel="stylesheet" media="screen" type="text/css"/>
 
-    <link href="<?php bloginfo('template_url'); ?>/assets/style/dedecms.css" rel="stylesheet" media="screen" type="text/css">
-    <link href="<?php bloginfo('template_url'); ?>/assets/style/image_roll.css" rel="stylesheet" media="screen" type="text/css">
-
-    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-    <script language="javascript" type="text/javascript">
-        function ScrollText(content, btnPrevious, btnNext, autoStart, timeout, isSmoothScroll) {
-            this.Speed = 10;
-            this.Timeout = timeout;
-            this.stopscroll = false;//是否停止滚动的标志位
-            this.isSmoothScroll = isSmoothScroll;//是否平滑连续滚动
-            this.LineHeight = 20;//默认高度。可以在外部根据需要设置
-            this.NextButton = this.$(btnNext);
-            this.PreviousButton = this.$(btnPrevious);
-            this.ScrollContent = this.$(content);
-            this.ScrollContent.innerHTML += this.ScrollContent.innerHTML;//为了平滑滚动再加一遍
-
-            if (this.PreviousButton) {
-                this.PreviousButton.onclick = this.GetFunction(this, "Previous");
-                this.PreviousButton.onmouseover = this.GetFunction(this, "MouseOver");
-                this.PreviousButton.onmouseout = this.GetFunction(this, "MouseOut");
-            }
-            if (this.NextButton) {
-                this.NextButton.onclick = this.GetFunction(this, "Next");
-                this.NextButton.onmouseover = this.GetFunction(this, "MouseOver");
-                this.NextButton.onmouseout = this.GetFunction(this, "MouseOut");
-            }
-            this.ScrollContent.onmouseover = this.GetFunction(this, "MouseOver");
-            this.ScrollContent.onmouseout = this.GetFunction(this, "MouseOut");
-
-            if (autoStart) {
-                this.Start();
-            }
-        }
-        ScrollText.prototype = {
-
-            $: function (element) {
-                return document.getElementById(element);
-            },
-            Previous: function () {
-                this.stopscroll = true;
-                this.Scroll("up");
-            },
-            Next: function () {
-                this.stopscroll = true;
-                this.Scroll("down");
-            },
-            Start: function () {
-                if (this.isSmoothScroll) {
-                    this.AutoScrollTimer = setInterval(this.GetFunction(this, "SmoothScroll"), this.Timeout);
-                }
-                else {
-                    this.AutoScrollTimer = setInterval(this.GetFunction(this, "AutoScroll"), this.Timeout);
-                }
-            },
-            Stop: function () {
-                clearTimeout(this.AutoScrollTimer);
-                this.DelayTimerStop = 0;
-            },
-            MouseOver: function () {
-                this.stopscroll = true;
-            },
-            MouseOut: function () {
-                this.stopscroll = false;
-            },
-            AutoScroll: function () {
-                if (this.stopscroll) {
-                    return;
-                }
-                this.ScrollContent.scrollTop++;
-                if (parseInt(this.ScrollContent.scrollTop) % this.LineHeight != 0) {
-                    this.ScrollTimer = setTimeout(this.GetFunction(this, "AutoScroll"), this.Speed);
-                }
-                else {
-                    if (parseInt(this.ScrollContent.scrollTop) >= parseInt(this.ScrollContent.scrollHeight) / 2) {
-                        this.ScrollContent.scrollTop = 0;
-                    }
-                    clearTimeout(this.ScrollTimer);
-                    //this.AutoScrollTimer = setTimeout(this.GetFunction(this,"AutoScroll"), this.Timeout);
-                }
-            },
-            SmoothScroll: function () {
-                if (this.stopscroll) {
-                    return;
-                }
-                this.ScrollContent.scrollTop++;
-                if (parseInt(this.ScrollContent.scrollTop) >= parseInt(this.ScrollContent.scrollHeight) / 2) {
-                    this.ScrollContent.scrollTop = 0;
-                }
-            },
-            Scroll: function (direction) {
-
-                if (direction == "up") {
-                    this.ScrollContent.scrollTop--;
-                }
-                else {
-                    this.ScrollContent.scrollTop++;
-                }
-                if (parseInt(this.ScrollContent.scrollTop) >= parseInt(this.ScrollContent.scrollHeight) / 2) {
-                    this.ScrollContent.scrollTop = 0;
-                }
-                else if (parseInt(this.ScrollContent.scrollTop) <= 0) {
-                    this.ScrollContent.scrollTop = parseInt(this.ScrollContent.scrollHeight) / 2;
-                }
-
-                if (parseInt(this.ScrollContent.scrollTop) % this.LineHeight != 0) {
-                    this.ScrollTimer = setTimeout(this.GetFunction(this, "Scroll", direction), this.Speed);
-                }
-            },
-            GetFunction: function (variable, method, param) {
-                return function () {
-                    variable[method](param);
-                }
-            }
-        }
-        function ignoreError() {
-            return true;
-        }
-        window.onerror = ignoreError;
-    </script>
-
+    <script language="javascript" type="text/javascript"
+            src="<?php bloginfo('template_url'); ?>/mod/jquery-nav.js"></script>
+    <script language="javascript" type="text/javascript"
+            src="<?php bloginfo('template_url'); ?>/mod/jquery.min.js"></script>
+    <!--第一行左侧，换图-->
     <script type="text/JavaScript">
         var banArray = new Array(3);
         var counter = 1;
@@ -167,16 +56,61 @@
         function changeBanner() {
             if (counter > 2)
                 counter = 0;
-            document.banner.src = banArray[counter].src; //sets a new banner
+            document.image_roll.src = banArray[counter].src; //sets a new banner
             counter++;
         }
         var timer = window.setInterval("changeBanner()", 4000);
         function show(number) {
             clearInterval(timer);
-            document.banner.src = "<?php bloginfo('template_url'); ?>/static/" + number + ".jpg";
+            document.image_roll.src = "<?php bloginfo('template_url'); ?>/static/" + number + ".jpg";
             counter = number;
             timer = window.setInterval("changeBanner()", 4000);
         }
     </script>
+
+    <script language="javascript" type="text/javascript"
+            src="<?php bloginfo('template_url'); ?>/mod/jquery-1.js"></script>
+    <script type="text/javascript"
+            src="<?php bloginfo('template_url'); ?>/mod/common.js"></script>
+    <!--换图结束-->
+
+    <!--导航栏-->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            <!---------导航显示信息--------  -->
+            $('.naviterm .iterms').each(function () {
+                $('.onli').css("background", "#db261f");
+                $('.onli').css("color", "#fff");
+                $(this).mouseover(function () {
+                    $('.onli').css("background", "none");
+                    $('.onli').css("color", "#111");
+                    $(this).find('.ws1').css("background", "#db261f");
+                    $(this).find('.ws1').css("color", "#fff");
+                    $(this).find('.pp').css("display", "block");
+                    $(this).find('.bgsty').mouseover(function () {
+                        $(this).css("background", "#db261f");
+                        $(this).find('.ws2').css("color", "#fff");
+                    })
+                    $(this).find('.bgsty').mouseout(function () {
+                        $(this).css("background", "none");
+                        $(this).find('.ws2').css("color", "#111");
+                    })
+
+                })
+                $(this).mouseout(function () {
+                    $(this).find('.ws1').css("background", "none");
+                    $(this).find('.ws1').css("color", "#111");
+                    $(this).find('.pp').css("display", "none");
+                    $('.onli').css("background", "#db261f");
+                    $('.onli').css("color", "#fff");
+                })
+            })
+        })
+    </script>
+    <!--导航栏结束-->
+
+    <!--标签页-->
+    <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/mod/tabPage.js"></script>
+    <!--标签页结束-->
     <?php wp_head();?>
 </head>

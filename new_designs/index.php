@@ -1,141 +1,191 @@
-<?php get_header();?>
+<?php get_header(); ?>
 <body>
-<div id="container" style="background-color: red;">
+<div class="header">
+    <div class="header_img">
+        <img src="<?php bloginfo('template_url'); ?>/static/neupioneer.png">
+    </div>
+    <div class="nav">
+        <ul class="naviterm">
+            <li class="iterms">
+                <a style="background: rgb(219, 38, 31) none repeat scroll 0% 0%;
+                color: rgb(255, 255, 255);" target="_blank" href="http://www.zgzyz.org.cn/"
+                   class="ws1 onli">先锋网首页</a>
+            </li>
+            <li class="iterms">
+                <a class="ws1">东大共青团</a>
 
-    <div id="header">
-        <div id="header_pic">
-            <div class="banner">
-                <embed src="<?php bloginfo('template_url'); ?>/static/banner1.swf"
-                       pluginspage="http://www.neupioneer.com/go/getflashplayer" type="application/x-shockwave-flash"
-                       name="obj1" palette="white|white" height="200" width="1200px">
-            </div>
-            <!-- /banner -->
-        </div>
-        <div id="navigator">
-            <div id="welcome"><span>欢迎访问东北大学团委先锋网</span>
+                <div class="pp">
+                    <div class="ul">
+                        <span class="bgsty"><a class="ws2">团委简介</a></span>
+                        <span class="bgsty"><a class="ws2">机构设置</a></span>
+                        <span class="bgsty"><a class="ws2">工作职责</a></span>
+                        <span class="bgsty"><a class="ws2">光辉历程</a></span>
+                    </div>
+                </div>
+            </li>
 
-                <div id="search">
-                    <input type="text" style="width: 200px;" placeholder="请输入要查找的内容"><input type="button" value="提交">
+            <li class="iterms"><a class="ws1">素质拓展</a>
+
+                <div class="pp">
+                    <div class="ul">
+
+                        <span class="bgsty"><a class="ws2">思想教育中心</a></span>
+                        <span class="bgsty"><a class="ws2">素质拓展中心</a></span>
+                        <span class="bgsty"><a class="ws2">社会实践中心</a></span>
+                        <span class="bgsty"><a class="ws2">科技创新中心</a></span>
+                        <span class="bgsty"><a class="ws2">文化素质中心</a></span>
+                    </div>
+                </div>
+            </li>
+            <li class="iterms"><a class="ws1">网上团支部</a>
+
+                <div class="pp">
+                    <div class="ul">
+                        <span class="bgsty"><a class="ws2">网上团支部</a></span>
+                        <span class="bgsty"><a class="ws2">支部博客联盟</a></span>
+                        <span class="bgsty"><a class="ws2">团日视频展播</a></span>
+                    </div>
+                </div>
+            </li>
+            <li class="iterms">
+                <a class="ws1">青年组织</a>
+
+                <div class="pp">
+                    <div class="ul">
+                        <span class="bgsty"><a class="ws2">学生会</a></span>
+                        <span class="bgsty"><a class="ws2">研究生会</a></span>
+                        <span class="bgsty"><a class="ws2">社团联合会</a></span>
+                        <span class="bgsty"><a class="ws2">志愿者协会</a></span>
+                    </div>
+                </div>
+            </li>
+            <li class="iterms">
+                <a class="ws1">先锋报刊</a>
+
+                <div class="pp">
+                    <div class="ul">
+                        <span class="bgsty"><a class="ws2">东大青年报</a></span>
+                        <span class="bgsty"><a class="ws2">共青团简报</a></span>
+                        <span class="bgsty"><a class="ws2">先锋图吧</a></span>
+                    </div>
+                </div>
+            </li>
+            <li class="iterms">
+                <a class="ws1">先锋网络</a>
+
+                <div class="pp">
+                    <div class="ul">
+                        <span class="bgsty"><a class="ws2">先锋技术部</a></span>
+                        <span class="bgsty"><a class="ws2">先锋树</a></span>
+                        <span class="bgsty"><a class="ws2">先锋星球</a></span>
+                        <span class="bgsty"><a class="ws2">先锋博客</a></span>
+                        <span class="bgsty"><a class="ws2">先锋广播</a></span>
+                        <span class="bgsty"><a class="ws2">先锋电视</a></span>
+                        <span class="bgsty"><a class="ws2">先锋论坛</a></span>
+                    </div>
+                </div>
+            </li>
+            <li class="iterms">
+                <a class="ws1">先锋论坛</a>
+            </li>
+            <li class="iterms">
+                <a class="ws1">文件下载</a>
+            </li>
+            <div class="clear"></div>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="first_line">
+        <div id="img_roll">
+            <div class="image">
+                <div id="left_image">
+                    <a href="#"><img src="<?php bloginfo('template_url'); ?>/static/1.jpg" width=360px height=330px
+                                     border=0 name="image_roll"></a>
+
+                    <div id="description">
+                        <span>description...</span>
+                    </div>
+                </div>
+                <div id="right_image">
+                    <div class="small_image">
+                        <a onclick="show(1)">
+                            <img src="<?php bloginfo('template_url'); ?>/static/1.jpg" width="72px" height="66px">
+                        </a>
+                    </div>
+                    <div class="small_image">
+                        <a onclick="show(2)">
+                            <img src="<?php bloginfo('template_url'); ?>/static/2.jpg" width="72px" height="66px">
+                        </a>
+                    </div>
+
+                    <div class="small_image">
+                        <a onclick="show(3)">
+                            <img src="<?php bloginfo('template_url'); ?>/static/3.jpg" width="72px" height="66px">
+                        </a>
+                    </div>
+                    <div class="more"><a href="" style="text-decoration: none;color: red"> 更多> </a></div>
                 </div>
             </div>
-            <nav>
+        </div>
+        <div id="multipage">
+            <div id="up">
+                <div class="mul_head">
+                    先锋头条
+                    <div class="my_border"></div>
+                </div>
+                <div class="mul_content">
+                    <?php
+                        query_posts("category_name=先锋头条");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
+                                <?php
+                            }
+                        }
+                    ?>
+                </div>
+            </div>
+            <div id="down">
+                <div class="mul_head">
+                    外媒报导
+                    <div class="my_border"></div>
+                </div>
+                <div class="mul_content">
+                    <?php
+                        query_posts("category_name=外媒报导");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
+                                <?php
+                            }
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second_line">
+        <div class="block_head">
+            专题
+        </div>
+        <div id="image">
+            <div style="width: 1200px;margin: 0px auto" class="banner has-dots">
                 <ul>
-                    <li><a href="#">先锋网首页</a></li>
-                    <li><a href="#">东大共青团</a>
-                        <ul>
-                            <li><a href="#">团委简介</a></li>
-                            <li><a href="#">机构设置</a></li>
-                            <li><a href="#">工作职责</a></li>
-                            <li><a href="#">光辉历程</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">素质拓展</a>
-                        <ul>
-                            <li><a href="http://www2.neupioneer.com/enac/">思想教育中心</a></li>
-                            <li><a href="http://suz.neupioneer.com/">素质拓展中心</a></li>
-                            <li><a href="http://219.216.96.15/spc/">社会实践中心</a></li>
-                            <li><a href="http://www2.neupioneer.com/kechuang/">科技创新中心</a></li>
-                            <li><a href="http://www2.neupioneer.com/enac/">文化素质中心</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">网上团支部</a>
-                        <ul>
-                            <li><a href="http://tzb.neupioneer.com/">网上团支部</a></li>
-                            <li><a href="http://tzb.neupioneer.com/home.php">支部博客联盟</a></li>
-                            <li><a href="http://tzb.neu-pioneer.cn/tzb/static/video/play.html">团日视频展播</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">青年组织</a>
-                        <ul>
-                            <li><a href="http://suneu.neupioneer.com/">学生会</a></li>
-                            <li><a href="http://neugu.neu.edu.cn/">研究生会</a></li>
-                            <li><a href="http://sl.neupioneer.com">社团联合会</a></li>
-                            <li><a href="http://zyz.neupioneer.com/">志愿者协会</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">先锋网络</a>
-                        <ul>
-                            <li><a href="http://tech.neupioneer.com/">先锋技术部</a></li>
-                            <li><a href="http://tree.neup.me/">先锋树</a></li>
-                            <li><a href="http://planet.neup.me/">先锋星球</a></li>
-                            <li><a href="http://blog.neupioneer.com/summary.php">先锋博客</a></li>
-                            <li><a href="http://www2.neupioneer.com/audio">先锋广播</a></li>
-                            <li><a href="http://www2.neupioneer.com/tv">先锋电视</a></li>
-                            <li><a href="http://bbs.neupioneer.com/">先锋论坛</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">文件下载</a></li>
+                    <li style="background-image: url(<?php bloginfo('template_url'); ?>/static/1.gif); width: 1000px;height: 90px"></li>
+                    <li style="background-image: url(<?php bloginfo('template_url'); ?>/static/2.png); width: 1000px;height: 90px"></li>
+                    <li style="background-image: url(<?php bloginfo('template_url'); ?>/static/3.png); width: 1000px;height: 90px"></li>
                 </ul>
-            </nav>
-
+            </div>
         </div>
-
-        <div id="content">
-            <div id="top_news">
-                <div id="image_roll">
-                    <div class="image">
-                        <div id="left_image">
-                            <a href="#"><img src="<?php bloginfo('template_url'); ?>/static/1.jpg" width=400px height=300px
-                                             border=0 name="banner"></a>
-
-                            <div id="description">
-                                <span>description...</span>
-                            </div>
-                        </div>
-                        <div id="right_image">
-                            <div class="small_image">
-                                <a onclick="show(1)">
-                                    <img src="<?php bloginfo('template_url'); ?>/static/1.jpg" width="88px" height="66px">
-                                </a>
-                            </div>
-                            <div class="small_image">
-                                <a onclick="show(2)">
-                                    <img src="<?php bloginfo('template_url'); ?>/static/2.jpg" width="88px" height="66px">
-                                </a>
-                            </div>
-
-                            <div class="small_image">
-                                <a onclick="show(3)">
-                                    <img src="<?php bloginfo('template_url'); ?>/static/3.jpg" width="88px" height="66px">
-                                </a>
-                            </div>
-                            <div class="more"><a href="" style="text-decoration: none;color: red"> 更多> </a></div>
-                        </div>
-                    </div>
-                </div>
-                <div id="news_list">
-                    <div class="top_news">
-                        <div id="news">
-                            头条新闻
-                        </div>
-                    </div>
-
-                    <div id="detail" style="margin-bottom: 0px;">
-                        <a href="" style="text-decoration: none; float: right;"> 详情 > </a>
-                    </div>
-
-                        <div class="normal_news">
-                            news1
-                        </div>
-                        <div class="normal_news">
-                            news2
-                        </div>
-                        <div class="normal_news">
-                            news3
-                        </div>
-                    </div>
-                </div>
-                <div id="middle_links">
-                    <div style="width: 1200px;margin: 0px auto" class="banner has-dots">
-                        <ul>
-                            <li style="background-image: url(<?php bloginfo('template_url'); ?>/static/1.gif); width: 1200px;height: 250px"></li>
-                            <li style="background-image: url(<?php bloginfo('template_url'); ?>/static/2.png); width: 1200px;height: 250px"></li>
-                            <li style="background-image: url(<?php bloginfo('template_url'); ?>/static/3.png); width: 1200px;height: 250px"></li>
-                        </ul>
-                    </div>
-                </div>
-                <script src="<?php bloginfo('template_url'); ?>/mods/jquery_002.js"></script>
-        <script src="<?php bloginfo('template_url'); ?>/mods/unslider.js"></script>
+        <script src="<?php bloginfo('template_url'); ?>/mod/jquery_002.js"></script>
+        <script src="<?php bloginfo('template_url'); ?>/mod/unslider.js"></script>
         <script>
             if (window.chrome) {
                 $('.banner li').css('background-size', '100% 100%');
@@ -170,271 +220,393 @@
                 //  Don't let them visit the url, we'll scroll you there
                 return false;
             });
+
+
         </script>
-                <div id="middle_2">
-                    <div class="content_block_1">
-                        <div class="block_1_header"><span class="Title_text">站内公告</span>
-
-                            <div class="more"><a href="http://www.neupioneer.com/plus/list.php?tid=6">更多</a></div>
-                        </div>
-                        <div class="block_1_content">
-                            <div class="announce mt1">
-                                <ul class="c1 ico2" id="breakNewsList">
-                                    <?php
-                                    query_posts('category_name=站内公告');
-                                    if(have_posts())
-                                    {
-                                        while(have_posts())
-                                        {
-                                            the_post();?>
-                                            <li><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></li>
-                                            <?php
-                                        }
-                                    }
-                                    ?>
-                                    <!--<li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14987.html"
-                                           title="关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知">关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14988.html"
-                                           title="关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知">关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14986.html"
-                                           title="关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知">关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14985.html"
-                                           title="关于组织开展2014-2015学年度团员民主评议工作的通知">关于组织开展2014-2015学年度团员民主评议工作的通知</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14703.html"
-                                           title="关于开展“示范团支部”创建和“十佳团支书”评选工作的通知">关于开展“示范团支部”创建和“十佳团支书”评选工作的通知</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14702.html"
-                                           title="关于开展十月份主题团日活动的通知">关于开展十月份主题团日活动的通知</a></li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0922/14668.html"
-                                           title="东北大学第十八届研究生支教团拟录取名单公示">东北大学第十八届研究生支教团拟录取名单公示</a></li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0630/14598.html"
-                                           title="&lt;strong&gt;东北大学2015年大学生暑期社会实践校级重点团队名单公示&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践校级重点团队名单公示</strong></a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0619/14521.html"
-                                           title="&lt;strong&gt;2015年东北大学“理论之光”暑期社会实践校级重点团队名单&lt;/strong&gt;"><strong>2015年东北大学“理论之光”暑期社会实践校级重点团队名单</strong></a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0608/14449.html"
-                                           title="&lt;strong&gt;东北大学2015年大学生暑期社会实践立项启动通知&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践立项启动通知</strong></a>
-                                    </li>
-
-
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14987.html"
-                                           title="关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知">关于评选2014-2015学年度东北大学优秀团员和优秀团干部的通知</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14988.html"
-                                           title="关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知">关于开展东北大学首届最美班长、最美寝室长评选网络投票的通知</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14986.html"
-                                           title="关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知">关于做好东北大学2014-2015学年度本科生单项奖评选工作的通知</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1020/14985.html"
-                                           title="关于组织开展2014-2015学年度团员民主评议工作的通知">关于组织开展2014-2015学年度团员民主评议工作的通知</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14703.html"
-                                           title="关于开展“示范团支部”创建和“十佳团支书”评选工作的通知">关于开展“示范团支部”创建和“十佳团支书”评选工作的通知</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/1007/14702.html"
-                                           title="关于开展十月份主题团日活动的通知">关于开展十月份主题团日活动的通知</a></li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0922/14668.html"
-                                           title="东北大学第十八届研究生支教团拟录取名单公示">东北大学第十八届研究生支教团拟录取名单公示</a></li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0630/14598.html"
-                                           title="&lt;strong&gt;东北大学2015年大学生暑期社会实践校级重点团队名单公示&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践校级重点团队名单公示</strong></a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0619/14521.html"
-                                           title="&lt;strong&gt;2015年东北大学“理论之光”暑期社会实践校级重点团队名单&lt;/strong&gt;"><strong>2015年东北大学“理论之光”暑期社会实践校级重点团队名单</strong></a>
-                                    </li>
-                                    <li>
-                                        <a href="http://www.neupioneer.com/html/zhanneigonggao/2015/0608/14449.html"
-                                           title="&lt;strong&gt;东北大学2015年大学生暑期社会实践立项启动通知&lt;/strong&gt;"><strong>东北大学2015年大学生暑期社会实践立项启动通知</strong></a>
-                                    </li>-->
-
-                                </ul>
-                                <!-- 站内公告滚动代码调用开始 -->
-                                <script language="JavaScript" type="text/javascript">
-                                    var scroll2 = new ScrollText("breakNewsList", "pre2", "next2", true, 40, true);
-                                    scroll2.LineHeight = 200;
-                                </script>
-                                <!-- 站内公告滚动代码调用结束 -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="content_block_1">
-                        <div class="block_1_header"><span class="Title_text">本月热点</span>
-
-                            <div class="more"><a href="#">更多</a></div>
-                        </div>
-                        <div class="block_1_content">
-                            <?php
-                                query_posts("category_name=本月热点");
-                                if(have_posts())
-                                {
-                                    while(have_posts())
-                                    {
-                                        the_post();?>
-                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
-                                        <?php
-                                    }
-                                }
-                            ?>
-                        </div>
-                    </div>
-                    <div class="content_block_1">
-                        <div class="block_1_header"><span class="Title_text">先锋校历</span>
-                            
-                            <div class="more"><a href="#">更多</a></div>
-                        </div>
-                        <div class="block_1_content">
-                            hello
-                        </div>
-                    </div>
+    </div>
+    <div class="third_line">
+        <div id="third_left">
+            <div class="block_content" style="height: 220px">
+                <div class="tl_title">
+                    <ul>
+                        <li id="tl_1" class="tl" style="background-color: red"><a href="#">东大要闻</a></li>
+                        <li id="tl_2" class="tl"><a href="#">媒体东大</a></li>
+                    </ul>
                 </div>
-                <div id="middle_left">
-                    <div id="left_part">
-                        <div class="big_content">
-                            <div class="content_header"><span class="Title_text">青春正能量</span>
-                            <?php
-                                query_posts("category_name=青春正能量");
-                                if(have_posts())
-                                {
-                                    while(have_posts())
-                                    {
-                                        the_post();?>
-                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
-                                        <?php
-                                    }
-                                }
-                            ?>  
-                                <div class="more"><a href="#">更多</a></div>
-                            </div>
-                        </div>
-                        <div class="big_content">
-                            <div class="content_header"><span class="Title_text">学习之路</span>
-                            <?php
-                                query_posts("category_name=学习之路");
-                                if(have_posts())
-                                {
-                                    while(have_posts())
-                                    {
-                                        the_post();?>
-                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
-                                        <?php
-                                    }
-                                }
-                            ?>
-                                <div class="more"><a href="#">更多</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="right_part">
-                        <div class="small_content">
-                            <div class="content_header"><span class="Title_text">热点追踪</span>
-                                <br>
-                            <?php
-                                query_posts("category_name=热点追踪");
-                                if(have_posts())
-                                {
-                                    while(have_posts())
-                                    {
-                                        the_post();?>
-                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
-                                        <?php
-                                    }
-                                }
-                            ?>
-                                <div class="more"><a href="#">更多</a></div>
-                            </div>
-                        </div>
-                        <div class="small_content">
-                            <div class="content_header"><span class="Title_text">学院风采</span>
-                            <?php
-                                query_posts("category_name=学院风采");
-                                if(have_posts())
-                                {
-                                    while(have_posts())
-                                    {
-                                        the_post();?>
-                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
-                                        <?php
-                                    }
-                                }
-                            ?>
-                                <div class="more"><a href="#">更多</a></div>
-                            </div>
-                        </div>
-                        <div class="small_content">
-                            <div class="content_header"><span class="Title_text">东大社团</span>
-                            <?php
-                                query_posts("category_name=东大社团");
-                                if(have_posts())
-                                {
-                                    while(have_posts())
-                                    {
-                                        the_post();?>
-                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
-                                        <?php
-                                    }
-                                }
-                            ?>
-                                <div class="more"><a href="#">更多</a></div>
-                            </div>
-                        </div>
-                        <!--<div class="small_content">
-                            <div class="content_header"><span class="Title_text">理论学习</span>
-                            <?php
-                                query_posts("category_name=理论学习");
-                                if(have_posts())
-                                {
-                                    while(have_posts())
-                                    {
-                                        the_post();?>
-                                         <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></p>
-                                        <?php
-                                    }
-                                }
-                            ?>
-                                <div class="more"><a href="#">更多</a></div>
-                            </div>-->
-                        </div>
-                    </div>
+                <div id="ktl_1" class="ktl">
+                    <ul>
+                    <?php
+                        query_posts("category_name=东大要闻");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText_long"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>                       
+                    </ul>
                 </div>
-                <div id="middle_right">
-                    <div id="spec_info">
-                        <div class="right_header"><span class="Title_text">专题信息</span>
-
-                            <div class="more"><a href="#">更多</a></div>
-                        </div>
-                        hello
-                    </div>
-                    <div id="leader_mail">
-
-                    </div>
-                    <div id="branch_links">
-                        <div class="right_header"><span class="Title_text">部门在线</span></div>
-                        hello
-                    </div>
+                <div id="ktl_2" class="ktl">
+                    <ul>
+                    <?php
+                        query_posts("category_name=媒体东大");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText_long"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
                 </div>
             </div>
-            <?php get_footer();?>
+        </div>
+        <div id="third_right">
+            <div class="block_content" style="height: 220px">
+                <div class="tr_title">
+                    <ul>
+                        <li id="tr_1" class="tr" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="tr_2" class="tr"><a href="#">title2</a></li>
+                    </ul>
+                </div>
+                <div id="ktr_1" class="ktr">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title1");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </div>
+                <div id="ktr_2" class="ktr">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title2");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middle_up_line">
+        <div id="up_left">
+            <div class="block_head">
+                思想引领行动
+                <div class="my_border"></div>
+            </div>
+            <div class="block_content">
+                <div class="ful_title">
+                    <ul>
+                        <li id="ful_1" class="ful" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="ful_2" class="ful"><a href="#">title2</a></li>
+                    </ul>
+                </div>
+                <div id="kful_1" class="kful">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title1");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </div>
+                <div id="kful_2" class="kful">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title2");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="up_right">
+            <div class="block_head">
+                素质拓展行动
+                <div class="my_border"></div>
+            </div>
+            <div class="block_content">
+                <div class="fur_title">
+                    <ul>
+                        <li id="fur_1" class="fur" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="fur_2" class="fur"><a href="#">title2</a></li>
+                    </ul>
+                </div>
+                <div id="kfur_1" class="kfur">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title1");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </div>
+                <div id="kfur_2" class="kfur">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title2");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middle_down_line">
+        <div id="down_left">
+            <div class="block_head">
+                权益服务行动
+                <div class="my_border"></div>
+            </div>
+            <div class="block_content">
+                <div class="fdl_title">
+                    <ul>
+                        <li id="fdl_1" class="fdl" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="fdl_2" class="fdl"><a href="#">title2</a></li>
+                    </ul>
+                </div>
+                <div id="kfdl_1" class="kfdl">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title1");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </div>
+                <div id="kfdl_2" class="kfdl">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title2");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="down_right">
+            <div class="block_head">
+                组织提升行动
+                <div class="my_border"></div>
+            </div>
+            <div class="block_content">
+                <div class="fdr_title">
+                    <ul>
+                        <li id="fdr_1" class="fdr" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="fdr_2" class="fdr"><a href="#">title2</a></li>
+                    </ul>
+                </div>
+                <div id="kfdr_1" class="kfdr">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title1");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </div>
+                <div id="kfdr_2" class="kfdr">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title2");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fifth_line">
+        <div id="fifth_left">
+            <div class="block_head">
+                微信
+                <div class="my_border"></div>
+            </div>
+        </div>
+        <div id="fifth_mid">
+            <div class="block_head">
+                微博
+                <div class="my_border"></div>
+            </div>
+        </div>
+        <div id="fifth_right">
+            <div class="block_head">
+                先锋排行
+                <div class="my_border"></div>
+            </div>
+            <div class="block_content">
+                <div class="fr_title">
+                    <ul>
+                        <li id="fr_1" class="fr" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="fr_2" class="fr"><a href="#">title2</a></li>
+                    </ul>
+                </div>
+                <div id="kfr_1" class="kfr">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title1");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                    ?>
+                    </ul>
+                </div>
+                <div id="kfr_2" class="kfr">
+                    <ul>
+                        <?php
+                        query_posts("category_name=title2");
+                        if(have_posts())
+                        {
+                            while(have_posts())
+                            {
+                                the_post();?>
+                                <li>
+                                    <div class = "tagText"><a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></div>
+                                </li>
+                                <?php
+                            }
+                        }
+                        ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sixth_line">
+        <div id="sixth_left">
+            <div class="block_head">
+                先锋海报墙
+                <div class="my_border"></div>
+            </div>
+        </div>
+        <div id="sixth_right">
+            <div class="block_head">
+                先锋校历
+                <div class="my_border"></div>
+            </div>
+            <div class="block_content">
+
+            </div>
+        </div>
+    </div>
+    <div class="some_links">
+        <ul>
+            <?php wp_list_bookmarks('title_li=&categorize=0'); ?>
+        </ul>
+    </div>
+</div>
+<?php get_footer() ?>
