@@ -1,0 +1,42 @@
+.image {
+    height: 300px;
+    width: 500px;
+    margin: auto;
+}
+
+.image #left_image {
+    float: left;
+    margin: 0px 10px 0px 0px;
+}
+
+.image #right_image {
+    height: 330px;
+    width: 95px;
+    background-color: #444444;
+    float: left;
+}
+
+.image .small_image {
+    height: 66px;
+    width: 72px;
+    float: right;
+    margin: 20px 5px 0px 5px;
+}
+
+.image .more {
+    float: right;
+    margin: 20px 10px 10px 0px;
+}
+
+.small_image:hover {
+    height: 66px;
+    width: 88px;
+    float: right;
+    margin: 20px 3px 0px 3px;
+}
+
+#left_image #description {
+    position: relative;
+    margin-top: -27px;
+    background-color: rgba(33, 166, 180, 0.8);
+}

@@ -1,0 +1,45 @@
+a {
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    color: #3d31ff;
+}
+
+em {
+    font-style: normal
+}
+
+li {
+    list-style: none
+}
+
+a.cur1 {
+    margin-right: 3px;
+    font-family: 微软雅黑;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    color: #fff;
+    float: left;
+    width: 106px;
+    height: 30px;
+    display: block;
+    background: url(../static/4.jpg) no-repeat;
+}
+
+a.cur1_no {
+    margin-right: 3px;
+    font-family: 微软雅黑;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    color: #c5050c;
+    float: left;
+    width: 106px;
+    height: 30px;
+    display: block;
+    background: url(../static/4.jpg) no-repeat;
+}
