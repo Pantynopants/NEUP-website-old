@@ -1,38 +1,35 @@
-.image {
-    height: 300px;
-    width: 500px;
-    margin: auto;
-}
-
 .image #left_image {
+    width:412px;
+    height:309px;
     float: left;
-    margin: 0px 10px 0px 0px;
+    margin: 5px;
 }
 
 .image #right_image {
-    height: 330px;
-    width: 95px;
+    height: 310px;
+    width: 115px;
     background-color: #444444;
     float: left;
+    margin: 5px;
 }
 
 .image .small_image {
-    height: 66px;
-    width: 72px;
+    /*height: 66px;*/
+    /*width: 72px;*/
     float: right;
-    margin: 20px 5px 0px 5px;
+    margin: 5px 0px;
 }
 
 .image .more {
     float: right;
-    margin: 20px 10px 10px 0px;
+    margin: 5px 10px 10px 0px;
 }
 
 .small_image:hover {
-    height: 66px;
-    width: 88px;
+    /*height: 66px;*/
+    /*width: 88px;*/
     float: right;
-    margin: 20px 3px 0px 3px;
+    margin: 5px 5px;
 }
 
 #left_image #description {

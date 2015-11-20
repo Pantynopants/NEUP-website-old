@@ -8,7 +8,7 @@ a{
 }
 
 
-.block_content .tl_title,.block_content .tr_title,.block_content .ful_title,.block_content .fur_title,.block_content .fdl_title,.block_content .fdr_title,.block_content .fr_title{
+.block_content .tl_title,.block_content .tm_title,.block_content .tr_title,.block_content .ful_title,.block_content .fur_title,.block_content .fdl_title,.block_content .fdr_title,.block_content .fr_title{
     height: 22px;
     /*line-height: 42px;*/
     width: 100%;
@@ -18,9 +18,9 @@ a{
     position: relative;
 }
 
-.block_content .tl_title ul li,.block_content .tr_title ul li,.block_content .ful_title ul li,.block_content .fur_title ul li,.block_content .fdl_title ul li,.block_content .fdr_title ul li,.block_content .fr_title ul li{
+.block_content .tl_title ul li,.block_content .tm_title ul li,.block_content .tr_title ul li,.block_content .ful_title ul li,.block_content .fur_title ul li,.block_content .fdl_title ul li,.block_content .fdr_title ul li,.block_content .fr_title ul li{
     float: left;
-    width: 50%;
+    width: 20%;
     height: 22px;
     border-left: 1px solid #dedede;
     font-size: 18px;
@@ -28,7 +28,7 @@ a{
     text-align: center;
 }
 
-#ktl_1,#ktr_1,#kful_1,#kfur_1,#kfdl_1,#kfdr_1,#kfr_1{
+#ktl_1,#ktm_1,#ktr_1,#kful_1,#kfur_1,#kfdl_1,#kfdr_1,#kfr_1{
     padding: 10px 20px 0 50px;
     clear: both;
     width: 559px;
@@ -37,7 +37,7 @@ a{
     position: absolute;
 }
 
-#ktl_2,#ktr_2,#kful_2,#kfur_2,#kfdl_2,#kfdr_2,#kfr_2 {
+#ktl_2,#ktm_2,#ktr_2,#kful_2,#kfur_2,#kfdl_2,#kfdr_2,#kfr_2 {
     padding: 10px 20px 0 50px;
     clear: both;
     width: 559px;

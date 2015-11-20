@@ -18,6 +18,19 @@ $(function () {
         var thisId = $(this).attr("id");
         $(this).removeClass("cur");
     });
+    $('.tm_title li').hover(function () {
+        var thisId = $(this).attr("id");
+        $(".ktm").not($("#k" + thisId)).animate({opacity: 0}, 300);
+        $(".ktm").not($("#k" + thisId)).css({"z-index": "0"});
+        $(".tm").not($("#" + thisId)).css("background-color", "#eeeeee");
+        $(this).addClass("cur");
+        $("#k" + thisId).stop(true, true).animate({opacity: 1.0}, 300);
+        $("#k" + thisId).css({"z-index": "10"});
+        $("#" + thisId).css("background-color", "red");
+    }, function () {
+        var thisId = $(this).attr("id");
+        $(this).removeClass("cur");
+    });
     $('.tr_title li').hover(function () {
         var thisId = $(this).attr("id");
         $(".ktr").not($("#k" + thisId)).animate({opacity: 0}, 300);

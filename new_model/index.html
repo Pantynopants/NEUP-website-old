@@ -52,16 +52,16 @@
         jQuery(document).ready(function ($) {
             <!---------导航显示信息--------  -->
             $('.naviterm .iterms').each(function () {
-                $('.onli').css("background", "#db261f");
+                $('.onli').css("background", "red");
                 $('.onli').css("color", "#fff");
                 $(this).mouseover(function () {
                     $('.onli').css("background", "none");
                     $('.onli').css("color", "#111");
-                    $(this).find('.ws1').css("background", "#db261f");
+                    $(this).find('.ws1').css("background", "red");
                     $(this).find('.ws1').css("color", "#fff");
                     $(this).find('.pp').css("display", "block");
                     $(this).find('.bgsty').mouseover(function () {
-                        $(this).css("background", "#db261f");
+                        $(this).css("background", "red");
                         $(this).find('.ws2').css("color", "#fff");
                     })
                     $(this).find('.bgsty').mouseout(function () {
@@ -74,7 +74,7 @@
                     $(this).find('.ws1').css("background", "none");
                     $(this).find('.ws1').css("color", "#111");
                     $(this).find('.pp').css("display", "none");
-                    $('.onli').css("background", "#db261f");
+                    $('.onli').css("background", "red");
                     $('.onli').css("color", "#fff");
                 })
             })
@@ -89,13 +89,13 @@
 <body>
 <div class="header">
     <div class="header_img">
-        <img src="static/neupioneer.png">
+        <img src="static/header_image.jpg" width="1080" height="210">
     </div>
     <div class="nav">
         <ul class="naviterm">
             <li class="iterms">
                 <a style="background: rgb(219, 38, 31) none repeat scroll 0% 0%;
-                color: rgb(255, 255, 255);" target="_blank" href="http://www.zgzyz.org.cn/"
+                color: rgb(255, 255, 255);" target="_blank" href=""
                    class="ws1 onli">先锋网首页</a>
             </li>
             <li class="iterms">
@@ -178,7 +178,7 @@
             <li class="iterms">
                 <a class="ws1">文件下载</a>
             </li>
-            <div class="clear"></div>
+            <!--<div class="clear"></div>-->
         </ul>
     </div>
 </div>
@@ -187,7 +187,7 @@
         <div id="img_roll">
             <div class="image">
                 <div id="left_image">
-                    <a href="#"><img src="static/1.jpg" width=360px height=330px
+                    <a href="#"><img src="static/1.jpg" width=412px height=309px
                                      border=0 name="image_roll"></a>
 
                     <div id="description">
@@ -197,18 +197,18 @@
                 <div id="right_image">
                     <div class="small_image">
                         <a onclick="show(1)">
-                            <img src="static/1.jpg" width="72px" height="66px">
+                            <img src="static/1.jpg" width="104px" height="78px">
                         </a>
                     </div>
                     <div class="small_image">
                         <a onclick="show(2)">
-                            <img src="static/2.jpg" width="72px" height="66px">
+                            <img src="static/2.jpg" width="104px" height="78px">
                         </a>
                     </div>
 
                     <div class="small_image">
                         <a onclick="show(3)">
-                            <img src="static/3.jpg" width="72px" height="66px">
+                            <img src="static/3.jpg" width="104px" height="78px">
                         </a>
                     </div>
                     <div class="more"><a href="" style="text-decoration: none;color: red"> 更多> </a></div>
@@ -219,7 +219,7 @@
             <div id="up">
                 <div class="mul_head">
                     先锋头条
-                    <div class="my_border"></div>
+                    <div class="block_more"></div>
                 </div>
                 <div class="mul_content">
 
@@ -237,9 +237,6 @@
         </div>
     </div>
     <div class="second_line">
-        <div class="block_head">
-            专题
-        </div>
         <div id="image">
             <div style="width: 1200px;margin: 0px auto" class="banner has-dots">
                 <ul>
@@ -314,6 +311,30 @@
                 </div>
             </div>
         </div>
+        <div id="third_mid">
+            <div class="block_content" style="height: 220px">
+                <div class="tl_title">
+                    <ul>
+                        <li id="tm_1" class="tl" style="background-color: red"><a href="#">title1</a></li>
+                        <li id="tm_2" class="tl"><a href="#">title2</a></li>
+                    </ul>
+                </div>
+                <div id="ktm_1" class="ktl">
+                    <ul>
+                        <li>
+                            <div class="tagText_long"> hello,world1</div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="ktm_2" class="ktl">
+                    <ul>
+                        <li>
+                            <div class="tagText_long"> hello,world2</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div id="third_right">
             <div class="block_content" style="height: 220px">
                 <div class="tr_title">
@@ -342,8 +363,9 @@
     <div class="middle_up_line">
         <div id="up_left">
             <div class="block_head">
+                <span class="my_border"></span>
                 思想引领行动
-                <div class="my_border"></div>
+                <div class="block_more">更多>></div>
             </div>
             <div class="block_content">
                 <div class="ful_title">
@@ -370,8 +392,9 @@
         </div>
         <div id="up_right">
             <div class="block_head">
+                <span class="my_border"></span>
                 素质拓展行动
-                <div class="my_border"></div>
+                <div class="block_more">更多>></div>
             </div>
             <div class="block_content">
                 <div class="fur_title">
@@ -400,8 +423,9 @@
     <div class="middle_down_line">
         <div id="down_left">
             <div class="block_head">
+                <span class="my_border"></span>
                 权益服务行动
-                <div class="my_border"></div>
+                <div class="block_more">更多>></div>
             </div>
             <div class="block_content">
                 <div class="fdl_title">
@@ -428,8 +452,9 @@
         </div>
         <div id="down_right">
             <div class="block_head">
-                组织提升行动
                 <div class="my_border"></div>
+                组织提升行动
+                <div class="block_more">更多>></div>
             </div>
             <div class="block_content">
                 <div class="fdr_title">
@@ -455,6 +480,9 @@
             </div>
         </div>
     </div>
+    <div class="mid_image">
+        <img src="static/mid_image.jpg" width="1080">
+    </div>
     <div class="fifth_line">
         <div id="fifth_left">
             <div class="block_head">
@@ -470,8 +498,9 @@
         </div>
         <div id="fifth_right">
             <div class="block_head">
-                先锋排行
                 <div class="my_border"></div>
+                先锋排行
+                <div class="block_more">更多>></div>
             </div>
             <div class="block_content">
                 <div class="fr_title">
@@ -505,6 +534,12 @@
                 <div class="my_border"></div>
             </div>
         </div>
+        <div id="sixth_mid">
+            <div class="block_head">
+                东大青年报
+                <div class="my_border"></div>
+            </div>
+        </div>
         <div id="sixth_right">
             <div class="block_head">
                 先锋校历
@@ -520,26 +555,24 @@
     </div>
 </div>
 <div class="footer">
-    <div class="content">
-        <!--<a class="icon"><img src="static/neupicon.jpg" alt="icon">&nbsp;&nbsp;&nbsp;&nbsp;先锋网</a>-->
-        <div class="site-info">
-            <a href=""><span>网站纠错</span></a><span>&nbsp;&nbsp;|&nbsp;</span>
-            <a href=""><span>关于我们</span></a><span>&nbsp;&nbsp;|&nbsp;</span>
-            <a href=""><span>联系我们</span></a><span>&nbsp;&nbsp;|&nbsp;</span>
-            <a href=""><span>设为首页</span></a><span>&nbsp;&nbsp;|&nbsp;</span>
-            <a href=""><span>加入收藏</span></a>
-            <br>
-            <hr>
-            <!--<br>-->
-            <span class="copyright">版权所有：东北大学团委</span>
-            <br>
-            <span class="icp">Copyright</span>
-            <br>
-            <span class="icp">地址：xxxxx<span>&nbsp;|&nbsp;</span>
-                邮编：110000<span>&nbsp;|&nbsp;</span>
-                电话：8008208820
-            </span>
-        </div>
+    <div class="site-info">
+        <a href=""><span class="icp">网站纠错</span></a>
+        <a href=""><span class="icp">关于我们</span></a>
+        <a href=""><span class="icp">联系我们</span></a>
+        <a href=""><span class="icp">设为首页</span></a>
+        <a href=""><span class="icp">加入收藏</span></a>
+    </div>
+    <div style="height: 4px;margin: 0px auto;background-color: #ffffff"></div>
+    <div class="site-info">
+        <span class="copyright">版权所有：东北大学团委</span>
+        <br>
+        <span class="icp">Copyright</span>
+        <br>
+        <span class="icp">地址：辽宁省沈阳市和平区3巷11号大学生活动中心</span>
+        <br>
+        <span class="icp">邮编：110000</span>
+        <br>
+        <span class="icp">电话：8008208820</span>
     </div>
 </div>
 </body>

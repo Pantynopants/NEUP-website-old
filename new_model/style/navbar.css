@@ -16,12 +16,12 @@
 .nav {
     height: 53px;
     margin-top: 194px;
-    padding-top: 4px;
+    padding-top: 0px;
     background: url(http://www.zgzyz.org.cn/pageimg/2015zyz2_dhbg.gif) repeat-x center top;
 }
 
 .naviterm {
-    width: 900px;
+    width: 920px;
     margin: 0px auto;
     height: 48px;
     text-align: left;
@@ -35,7 +35,7 @@
 
 .naviterm .ws1 {
     color: #111;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
     font-family: "Microsoft YaHei" ! important;
     padding: 0px 16px;
